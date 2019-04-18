@@ -30,16 +30,27 @@ Three files are required by ETAG for upload.  ETAG understands (parses) data fro
 - Animals
 - Reader locations
 
-You can upload data to ETAG manually or automatically. 
+You can upload these data files to ETAG manually (all three) or automatically (RFID reads only).
+
+### Required fields
+All extra columns in Animals and Reader Locations will be put in a JSON field that stores data in a single, queryable column.
+#### RFID reads
+#### Animals
+#### Reader locations
 
 ### Manually 
 Use the upload tab to load the three files.  If you upload duplicate reads, ETAG will ask you if you are sure.  Duplicates could be edited data that you are re-uploading to update the files, or accidental duplicates.  Consider which is which when saying yes or no.
 
-#### ETAG formats
-#### Legacy data
+Visit our OSF page to see example data formatted correctly.  *LINK HERE*.
+
+#### RFID read data from Bridge lab ETAG reader after 2019.
+The RFID reads from these readers should conform to the ETAG database upload standards and need no modification.
+
+#### Legacy or third-party read data
+The RFID reads from these readers may not conform to the ETAG database upload standards.
 
 ### Automatically
-
+You can upload RFID reads automatically to the ETAG portal using the API.
 #### Wired connection
 
 #### Wireless connection
@@ -48,7 +59,7 @@ Use the upload tab to load the three files.  If you upload duplicate reads, ETAG
 You will likely want to download your data both as a backup and to use in local analyses.  We back up your data in xyz ways.  You can download your full dataset as a .zip file containing comma separated value (.csv) text files using the download tab/button.
 
 ## Visualize data
-The ETAG portal offers three filters and two map types.
+The ETAG portal currently offers three filters and two map types.
 - Filter by
   - Species
   - RFID reader
@@ -57,8 +68,7 @@ The ETAG portal offers three filters and two map types.
   - Summary of counts
   - Map of individual reads
 
-## Connect to your website via API
-API link/documentation here.  
+You can also pull data to your own website via the API and create your own web visualizations.  We encourage sharing and welcome contributions to our visualization code on github.  
 
 ## Design a RFID antenna
 The "Antenna" tab allows you to input parameters and see the resulting RFID antenna.  Please contact Dr. J. Ruyle (ruyle@ou.edu) or Dr. E. Bridge (ebridge@ou.edu) if you have questions about antenna design.
