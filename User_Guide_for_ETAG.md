@@ -68,7 +68,7 @@ The ETAG portal currently offers three filters and two map types.
   - Summary of counts
   - Map of individual reads
 
-You can also pull data to your own website via the API and create your own web visualizations.  We encourage sharing and welcome contributions to our visualization code on github.  
+You can also pull data to your own website via the API and create your own web visualizations in Javascript Leaflet pulling from the ETAG API.  We encourage sharing and welcome contributions to our visualization code on github.  
 
 ## Design a RFID antenna
 The "Antenna" tab allows you to input parameters and see the resulting RFID antenna.  Please contact Dr. J. Ruyle (ruyle@ou.edu) or Dr. E. Bridge (ebridge@ou.edu) if you have questions about antenna design.
