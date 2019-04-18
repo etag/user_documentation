@@ -24,10 +24,19 @@ General overview and diagram.
 ## Create a (free!) account
 
 ## Upload files
+Three files are required by ETAG for upload.  ETAG understands (parses) data from certain fields to populate the database.
+
+- RFID reads
+- Animals
+- Reader locations
+
+You can upload data to ETAG manually or automatically. 
 
 ### Manually 
+Use the upload tab to load the three files.  If you upload duplicate reads, ETAG will ask you if you are sure.  Duplicates could be edited data that you are re-uploading to update the files, or accidental duplicates.  Consider which is which when saying yes or no.
 
-### Legacy data
+#### ETAG formats
+#### Legacy data
 
 ### Automatically
 
@@ -36,8 +45,7 @@ General overview and diagram.
 #### Wireless connection
 
 ## Download and back up data
-You will likely want to download your data both as a backup and to use in local analyses.  We back up your data in xyz ways.
-
+You will likely want to download your data both as a backup and to use in local analyses.  We back up your data in xyz ways.  You can download your full dataset as a .zip file containing comma separated value (.csv) text files using the download tab/button.
 
 ## Visualize data
 The ETAG portal offers three filters and two map types.
