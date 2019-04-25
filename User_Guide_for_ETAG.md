@@ -56,7 +56,9 @@ You can upload RFID reads automatically to the ETAG portal using the API.
 #### Wireless connection
 
 ## Download and back up data
-You will likely want to download your data both as a backup and to use in local analyses.  We back up your data in xyz ways.  You can download your full dataset as a .zip file containing comma separated value (.csv) text files using the download tab/button.
+You will likely want to download your data to use in local analyses or as a backup.  You can download your full dataset as a .zip file containing comma separated value (.csv) text files using the download tab/button.
+
+The primary ETAG repository resides within the Amazon Web Services RDS (Relational Database Services).  The ETAG system will maintain an off-site backup copy of all data through the Amazon Simple Storage Service (S3). ETAG will also generate two tape copies of all data on a weekly basis within the OU Petastore. Hence, a catastrophic failure of either or both primary storage facilities will not result in the loss of all ETAG data.
 
 ## Visualize data
 The ETAG portal currently offers three filters and two map types.
