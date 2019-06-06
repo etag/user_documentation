@@ -39,9 +39,28 @@ All extra columns in Animals and Reader Locations will be put in a JSON field th
 #### Reader locations
 
 ### Manually 
-Use the upload tab to load the three files.  If you upload duplicate reads, ETAG will ask you if you are sure.  Duplicates could be edited data that you are re-uploading to update the files, or accidental duplicates.  Consider which is which when saying yes or no.
+Use the upload tab to load the three files.  Visit our OSF page to see example data formatted correctly.  *LINK HERE*.
 
-Visit our OSF page to see example data formatted correctly.  *LINK HERE*.
+#### Animals
+##### Upload
+When you upload your animals.csv file, the code checks a list of the user's existing owned tag ids versus the tag ids in the csv.
+
+If the tag ID doesn't exist, ETAG adds the tag ID to the database.  If the tag exists but the user doesn't own it, you cannot update the data for that tag ID.  The API currently gives an error (FIXME: Tyler will add what the message is) but not the UI, so for you as an end user it will simply not upload.  The remainder of your csv file will upload normally.
+
+##### Correcting and appending records
+If the tag ID matches one of your owned tags in the database, ETAG will check all other fields for your animals.csv file.  If there are differences, ETAG will UPDATE BY OVERWRITING.
+
+If there are multiple rows in your animals.csv file that have identical tag IDs (i.e., you have multiple records or measurements for one individual), ETAG will update the field data (FIXME: in progress for implementation).
+
+These two behaviors provide a method to correct data via uploads.  You can also use the UI to correct them manually. 
+
+If you want to append data, you MUST upload all previous records plus your appended items.  You can export your existing records if you have misplaced your local files, and use that template to upload the corrected (in this case, appended) records for the tag ID (i.e. for the tagged animal).
+
+#### Tag reads
+
+### Automatically loading
+
+Duplicates should not occur because loading occurs real-time.
 
 #### RFID read data from Bridge lab ETAG reader after 2019.
 The RFID reads from these readers should conform to the ETAG database upload standards and need no modification.
