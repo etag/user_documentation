@@ -54,7 +54,7 @@ If there are multiple rows in your animals.csv file that have identical tag IDs 
 
 These two behaviors provide a method to correct data via uploads.  You can also use the UI to correct them manually. 
 
-If you want to append data, you MUST upload all previous records plus your appended items.  You can export your existing records if you have misplaced your local files, and use that template to upload the corrected (in this case, appended) records for the tag ID (i.e. for the tagged animal).
+If you want to append data, you MUST upload all previous records plus your appended items. You can export your existing records if you have misplaced your local files using the blue "Download data" button below your records.  Use that template to upload the corrected (in this case, appended) records for the tag ID (i.e. for the tagged animal).
 
 #### Tag reads
 
