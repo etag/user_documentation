@@ -74,10 +74,14 @@ You can upload RFID reads automatically to the ETAG portal using the API.
 
 #### Wireless connection
 
-## Download and back up data
-You will likely want to download your data to use in local analyses or as a backup.  You can download your full dataset as a .zip file containing comma separated value (.csv) text files using the download tab/button.
+## Exports, downloads, and backups
+You will likely want to download your data to use in local analyses or as a backup.
 
-The primary ETAG repository resides within the Amazon Web Services RDS (Relational Database Services).  The ETAG system will maintain an off-site backup copy of all data through the Amazon Simple Storage Service (S3). ETAG will also generate two tape copies of all data on a weekly basis within the OU Petastore. Hence, a catastrophic failure of either or both primary storage facilities will not result in the loss of all ETAG data.
+### Downloading your data
+You can download each data type (Tag Reads, Tagged Animals, and Locations) as a .csv file in the 'My ETAG Data' tab.
+
+### ETAG automated backups
+The primary ETAG repository resides within the Amazon Web Services RDS (Relational Database Services).  The ETAG system will maintain an off-site backup copy of all data through the Amazon Simple Storage Service (S3). ETAG will also generate two tape copies of all data on a weekly basis within the OU Petastore (FIXME: needs implementation). Hence, a catastrophic failure of either or both primary storage facilities will not result in the loss of all ETAG data.
 
 ## Visualize data
 The ETAG portal currently offers three filters and two map types.
@@ -87,9 +91,9 @@ The ETAG portal currently offers three filters and two map types.
   - RFID tag ID
 - Map types
   - Summary of counts
-  - Map of individual reads
+  - Individual reads
 
 You can also pull data to your own website via the API and create your own web visualizations in Javascript Leaflet pulling from the ETAG API.  We encourage sharing and welcome contributions to our visualization code on github.  
 
-## Design a RFID antenna
+## Design a RFID antenna (FIXME: in progress)
 The "Antenna" tab allows you to input parameters and see the resulting RFID antenna.  Please contact Dr. J. Ruyle (ruyle@ou.edu) or Dr. E. Bridge (ebridge@ou.edu) if you have questions about antenna design.
