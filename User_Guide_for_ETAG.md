@@ -1,6 +1,6 @@
 # User guide to Electronic Transponder Analysis Gateway
 
-## Last updated 06 June 2019
+## Last updated 13 June 2019
 For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or submit an issue on one of the repositories at https://github.com/etag .
 
 # What is ETAG?
@@ -10,11 +10,11 @@ The Electronic Transponder Analysis Gateway (ETAG) is a database and software sy
 RFID is a mature and ubiquitous technology, familiar to people in the form of electronic tool-booths or as 'microchip' tags implanted in cats and dogs. RFID entails short-range wireless communication between small transponder tags and readers, and it can facilitate tracking of individual items or animals that are equipped with a tag. A community of researchers has emerged that employs RFID to track individual birds, mammals, fish, reptiles, and even insects in a wide range of field and laboratory research endeavors.
 
 # Who should use ETAG?
-You should use ETAG if you have RFID reads with associated data on the tagged organisms.
+You should use ETAG if you have RFID reads with associated data on the tagged organisms and the reader locations.  Our system requires three types of files: animal metadata, reader metadata, and tag reads.
 
 # Why should I use ETAG instead of my own personal data management system?
-- Using ETAG's already designed, standardized database will save you time on managing your own database
-- ETAG provides several visualizations that can be accessed via API for your lab website or outreach
+- Using ETAG's already designed, standardized database will save you time on managing your own database.
+- ETAG provides several visualizations that can be accessed via API for your lab website or outreach.
 - Data can be public OR private, allowing you to share data when you're ready.
 
 # How do I use the ETAG website?
@@ -26,17 +26,14 @@ General overview and diagram.
 ## Upload files
 Three files are required by ETAG for upload.  ETAG understands (parses) data from certain fields to populate the database.
 
-- RFID reads
+- RFID Reads
 - Animals
-- Reader locations
+- Reader Locations
 
-You can upload these data files to ETAG manually (all three) or automatically (RFID reads only).
+You can upload these data files to ETAG manually (all three) or automatically (RFID reads only).  Once you have Animals and Reader Locations, you can upload the updated RFID Reads file as you get more reads.
 
 ### Required fields
-All extra columns in Animals and Reader Locations will be put in a JSON field that stores data in a single, queryable column.
-#### RFID reads
-#### Animals
-#### Reader locations
+Required fields are shown when you download the template from ETAG.  The template file is only shown when you do not have updates.  All extra columns in Animals and Reader Locations will be put in JSON fields that store data in a single, queryable column per table (for Animals and Reader Locations).
 
 ### Manually 
 Use the upload tab to load the three files.  Visit our OSF page to see example data formatted correctly.  *LINK HERE*.
@@ -57,33 +54,31 @@ These two behaviors provide a method to correct data via uploads.  You can also 
 If you want to append data, you MUST upload all previous records plus your appended items. You can export your existing records if you have misplaced your local files using the blue "Download data" button below your records.  Use that template to upload the corrected (in this case, appended) records for the tag ID (i.e. for the tagged animal).
 
 #### Tag reads
-
-### Automatically loading
-
-Duplicates should not occur because loading occurs real-time.
-
-#### RFID read data from Bridge lab ETAG reader after 2019.
-The RFID reads from these readers should conform to the ETAG database upload standards and need no modification.
-
-#### Legacy or third-party read data
-The RFID reads from these readers may not conform to the ETAG database upload standards.
+The RFID reads from 2019 or later Bridge Lab ETAG readers should conform to the ETAG database upload standards and need no modification.  RFID read output files from older Bridge lab or third-party readers may not conform to the ETAG database upload standards.  Please compare your files to the template files or to your exported files, make appropriate formatting changes to a copy of your original data, and upload the revised copies.
 
 ### Automatically
-You can upload RFID reads automatically to the ETAG portal using the API.
+You can upload RFID Reads automatically to the ETAG portal using the API.  Duplicates should not occur because loading occurs real-time.  Animals and Reader Location files must be uploaded manually before you allow RFID Reads to attempt loading.
+
 #### Wired connection
+In development.
 
 #### Wireless connection
+[In development] [1]
 
 ## Exports, downloads, and backups
-You will likely want to download your data to use in local analyses or as a backup.
+You will likely want to download your data to use in local analyses or as a backup.  Here we describe how you can download your data and how we backup your data in the cloud and physically at the University of Oklahoma.
 
 ### Downloading your data
-You can download each data type (Tag Reads, Tagged Animals, and Locations) as a .csv file in the 'My ETAG Data' tab.
+You can download each data type (Tag Reads, Tagged Animals, and Locations) as a .csv file from the three pages within the 'My ETAG Data' tab.
 
 ### ETAG automated backups
-The primary ETAG repository resides within the Amazon Web Services RDS (Relational Database Services).  The ETAG system will maintain an off-site backup copy of all data through the Amazon Simple Storage Service (S3). ETAG will also generate two tape copies of all data on a weekly basis within the OU Petastore (FIXME: needs implementation). Hence, a catastrophic failure of either or both primary storage facilities will not result in the loss of all ETAG data.
+The primary ETAG repository resides within Amazon Web Services RDS (Relational Database Services).  The ETAG system will maintain an off-site backup copy of all data through the Amazon Simple Storage Service (S3)
 
-## Visualize data
+ETAG will generate two tape copies of all data on a weekly basis within the OU Petastore (FIXME: needs implementation)
+
+With three storage locations (main on RDS and backups on S3, and Petastore), a catastrophic failure of either or both primary backup facilities will not result in the loss ETAG data.
+
+## Visualize data (FIXME: needs implementation)
 The ETAG portal currently offers three filters and two map types.
 - Filter by
   - Species
@@ -93,7 +88,10 @@ The ETAG portal currently offers three filters and two map types.
   - Summary of counts
   - Individual reads
 
-You can also pull data to your own website via the API and create your own web visualizations in Javascript Leaflet pulling from the ETAG API.  We encourage sharing and welcome contributions to our visualization code on github.  
+You can feature visualizations on your own website in Javascript Leaflet by pulling from the ETAG API.  We encourage sharing and welcome contributions to our [in development visualization code][2].  
 
 ## Design a RFID antenna (FIXME: in progress)
 The "Antenna" tab allows you to input parameters and see the resulting RFID antenna.  Please contact Dr. J. Ruyle (ruyle@ou.edu) or Dr. E. Bridge (ebridge@ou.edu) if you have questions about antenna design.
+
+[1] https://osf.io/5dh3q/
+[2] https://osf.io/8gwjz/
