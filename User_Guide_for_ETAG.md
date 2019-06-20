@@ -19,9 +19,9 @@ You should use ETAG if you have RFID reads with associated data on the tagged or
 
 # How do I use the ETAG website?
 
-General overview and diagram.
+Visit https://head.ouetag.org. 
 
-## Create a (free!) account
+## Create a (free!) account (FIXME)
 
 ## Upload files
 Three comma-separated text files (.csv) are required by ETAG for upload.  ETAG understands (parses) data from certain fields to populate the database.
