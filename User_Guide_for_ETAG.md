@@ -24,37 +24,37 @@ General overview and diagram.
 ## Create a (free!) account
 
 ## Upload files
-Three files are required by ETAG for upload.  ETAG understands (parses) data from certain fields to populate the database.
+Three comma-separated text files (.csv) are required by ETAG for upload.  ETAG understands (parses) data from certain fields to populate the database.
 
 - RFID Reads
 - Animals
 - Reader Locations
 
-You can upload these data files to ETAG manually (all three) or automatically (RFID reads only).  Once you have Animals and Reader Locations, you can upload the updated RFID Reads file as you get more reads.
+You can upload these data files to ETAG manually (all three) or automatically (RFID Reads only).  Once you have Animals and Reader Locations, you can upload the updated RFID Reads file as you get more reads.  We will use these filenames, but the filenames can be as you choose.
 
 ### Required fields
-Required fields are shown when you download the template from ETAG.  The template file is only shown when you do not have updates.  All extra columns in Animals and Reader Locations will be put in JSON fields that store data in a single, queryable column per table (for Animals and Reader Locations).
+Required fields are shown when you download the template from ETAG.  Your fields (columns) must have names exactly matching the template's required fields.  The template file is only shown when you do not have updates.  All extra columns in Animals and Reader Locations will be put in JSON fields that store data in a single, queryable column per table (for Animals and Reader Locations).  These extra columns are where you will put data such as animal measurements or sensor data accompanying tag reads.
 
 ### Manually 
-Use the upload tab to load the three files.  Visit our OSF page to see example data formatted correctly.  *LINK HERE*.
+Use the upload tab to load the three files.  Visit our OSF page to see example data formatted correctly (same as the templates).  *LINK HERE*.
 
 #### Animals
 ##### Upload
-When you upload your animals.csv file, the code checks a list of the user's existing owned tag ids versus the tag ids in the csv.
+When you upload your Animals file, the code checks a list of the user's existing owned tag IDs versus the tag IDs in the csv.
 
-If the tag ID doesn't exist, ETAG adds the tag ID to the database.  If the tag exists but the user doesn't own it, you cannot update the data for that tag ID.  The API currently gives an error (FIXME: Tyler will add what the message is) but not the UI, so for you as an end user it will simply not upload.  The remainder of your csv file will upload normally.
+If the tag ID doesn't exist, ETAG adds the tag ID to the database.  If the tag exists but the user doesn't own it, you cannot update the data for that tag ID.  The API currently gives an error (FIXME: Tyler will add what the message is) but not the user interface (UI), so for you as an end user it will simply not upload.  The remainder of your csv file will upload normally.
 
 ##### Correcting and appending records
-If the tag ID matches one of your owned tags in the database, ETAG will check all other fields for your animals.csv file.  If there are differences, ETAG will UPDATE BY OVERWRITING.
+If the tag ID matches one of your owned tags in the database, ETAG will check all other fields for your Animals file.  If there are differences, ETAG will UPDATE BY OVERWRITING.
 
-If there are multiple rows in your animals.csv file that have identical tag IDs (i.e., you have multiple records or measurements for one individual), ETAG will update the field data (FIXME: in progress for implementation).
+If there are multiple rows in your Animals file that have identical tag IDs (i.e., you have multiple records or measurements for one individual), ETAG will update the field data (FIXME: in progress for implementation).
 
 These two behaviors provide a method to correct data via uploads.  You can also use the UI to correct them manually. 
 
-If you want to append data, you MUST upload all previous records plus your appended items. You can export your existing records if you have misplaced your local files using the blue "Download data" button below your records.  Use that template to upload the corrected (in this case, appended) records for the tag ID (i.e. for the tagged animal).
+If you want to append data, you MUST upload all previous records plus your appended items. You can export your existing records if you have misplaced your local files using the blue "Download data" button below your records.  Use that as a template to upload the corrected (in this case, appended) records for the tag ID (i.e. for the tagged animal).
 
 #### Tag reads
-The RFID reads from 2019 or later Bridge Lab ETAG readers should conform to the ETAG database upload standards and need no modification.  RFID read output files from older Bridge lab or third-party readers may not conform to the ETAG database upload standards.  Please compare your files to the template files or to your exported files, make appropriate formatting changes to a copy of your original data, and upload the revised copies.
+Tag reads from 2019 or later Bridge Lab ETAG readers should conform to the ETAG database formatting standards and need no modification.  Output files from older Bridge lab or third-party readers may not conform to the ETAG database upload standards.  Please compare your files to the template files or to your exported files, make appropriate formatting changes to a copy of your original data, and upload the revised copies.
 
 ### Automatically
 You can upload RFID Reads automatically to the ETAG portal using the API.  Duplicates should not occur because loading occurs real-time.  Animals and Reader Location files must be uploaded manually before you allow RFID Reads to attempt loading.
@@ -69,14 +69,14 @@ In development.
 You will likely want to download your data to use in local analyses or as a backup.  Here we describe how you can download your data and how we backup your data in the cloud and physically at the University of Oklahoma.
 
 ### Downloading your data
-You can download each data type (Tag Reads, Tagged Animals, and Locations) as a .csv file from the three pages within the 'My ETAG Data' tab.
+You can download each data type (RFID Reads, Animals, and Reader Locations) as a .csv file from the three pages within the 'My ETAG Data' tab.
 
 ### ETAG automated backups
-The primary ETAG repository resides within Amazon Web Services RDS (Relational Database Services).  The ETAG system will maintain an off-site backup copy of all data through the Amazon Simple Storage Service (S3)
+The primary ETAG repository resides within Amazon Web Services (AWS) Relational Database Services (RDS).  The ETAG system will maintain an off-site backup copy of all data through the AWS Simple Storage Service (S3)
 
-ETAG will generate two tape copies of all data on a weekly basis within the OU Petastore (FIXME: needs implementation)
+ETAG will generate two tape copies of all data on a weekly basis within the University of Oklahoma (OU) Petastore (FIXME: needs implementation)
 
-With three storage locations (main on RDS and backups on S3, and Petastore), a catastrophic failure of either or both primary backup facilities will not result in the loss ETAG data.
+With three storage locations (main on AWS RDS,  backups on AWS S3, and weekly on the OU Petastore), even a simultaneous and catastrophic failure in 2/3 facilities will not result in the loss of ETAG data.
 
 ## Visualize data (FIXME: needs implementation)
 The ETAG portal currently offers three filters and two map types.
