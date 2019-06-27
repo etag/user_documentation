@@ -1,6 +1,6 @@
 # User guide to Electronic Transponder Analysis Gateway
 
-## Last updated 20 June 2019
+## Last updated 27 June 2019
 For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or submit an issue on one of the repositories at https://github.com/etag .
 
 # What is ETAG?
@@ -68,7 +68,7 @@ In development.
 ## Exports, downloads, and backups
 You will likely want to download your data to use in local analyses or as a backup.  Here we describe how you can download your data and how we backup your data in the cloud and physically at the University of Oklahoma.
 
-### Downloading your data
+### Downloading your data (FIXME: currently needs work on separating columns, so do not test this part)
 You can download each data type (RFID Reads, Animals, and Reader Locations) as a .csv file from the three pages within the 'My ETAG Data' tab.
 
 ### ETAG automated backups
