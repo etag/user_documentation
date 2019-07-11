@@ -1,7 +1,13 @@
 # User guide to Electronic Transponder Analysis Gateway
 
-## Last updated 27 June 2019
+## Last updated 11 July 2019
 For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or submit an issue on one of the repositories at https://github.com/etag .
+
+### Fixme: put this text or link to it from ETAG main page.
+### Fixme: screenshots after UI complete.
+### Fixme: too long text.  Split out pages for quick instructions.  
+### Fixme: change animals table to "tag data" and reader locations to "reader data" (check if location is required - specified in schema)
+
 
 # What is ETAG?
 The Electronic Transponder Analysis Gateway (ETAG) is a database and software system to provide professional data management and versatile data dissemination to the growing community of researchers who use Radio Frequency Identification (RFID) technology to advance biological inquiries in fields like animal behavior, ecological physiology, and community ecology. ETAG is an infrastructure based on open-source tools, allowing scientists to collect, validate, visualize, analyze, and share data in near real-time. ETAG facilitates new capacities both for producing novel science and for sharing data with fellow researchers and the general public. Our system will free up time from the management of data collection, analysis, and curation (currently done by hand), leaving researchers with more time for science. 
@@ -26,28 +32,29 @@ Visit https://head.ouetag.org.
 ## Upload files
 Three comma-separated text files (.csv) are required by ETAG for upload.  ETAG understands (parses) data from certain fields to populate the database.
 
+- Tagged Data (formerly Animals)
+- Reader Locations = Reader Data
 - RFID Reads
-- Animals
-- Reader Locations
 
-You can upload these data files to ETAG manually (all three) or automatically (RFID Reads only).  Once you have Animals and Reader Locations, you can upload the updated RFID Reads file as you get more reads.  We will use these filenames, but the filenames can be as you choose.
+
+You can upload these data files to ETAG manually (all three) or automatically (RFID Reads only).  Once you have Tagged Data and Reader Locations, you can upload the updated RFID Reads file as you get more reads.  We will use these filenames, but the filenames can be as you choose.
 
 ### Required fields
-Required fields are shown when you download the template from ETAG.  Your fields (columns) must have names exactly matching the template's required fields.  The template file is only shown when you do not have updates.  All extra columns in Animals and Reader Locations will be put in JSON fields that store data in a single, queryable column per table (for Animals and Reader Locations).  These extra columns are where you will put data such as animal measurements or sensor data accompanying tag reads.
+Required fields are shown when you download the template from ETAG.  Your fields (columns) must have names exactly matching the template's required fields.  The template file is only shown when you do not have updates.  All extra columns in Tagged Data and Reader Locations will be put in JSON fields that store data in a single, queryable column per table (for Tagged Data and Reader Locations).  These extra columns are where you will put data such as animal measurements or sensor data accompanying tag reads.
 
 ### Manually 
 Use the upload tab to load the three files.  Visit our OSF page to see example data formatted correctly (same as the templates).  *LINK HERE*.
 
-#### Animals
+#### Tagged Data
 ##### Upload
-When you upload your Animals file, the code checks a list of the user's existing owned tag IDs versus the tag IDs in the csv.
+When you upload your Tagged Data file, the code checks a list of the user's existing owned tag IDs versus the tag IDs in the csv.
 
 If the tag ID doesn't exist, ETAG adds the tag ID to the database.  If the tag exists but the user doesn't own it, you cannot update the data for that tag ID.  The API currently gives an error (FIXME: Tyler will add what the message is) but not the user interface (UI), so for you as an end user it will simply not upload.  The remainder of your csv file will upload normally.
 
 ##### Correcting and appending records
-If the tag ID matches one of your owned tags in the database, ETAG will check all other fields for your Animals file.  If there are differences, ETAG will UPDATE BY OVERWRITING.
+If the tag ID matches one of your owned tags in the database, ETAG will check all other fields for your Tagged Data file.  If there are differences, ETAG will UPDATE BY OVERWRITING.
 
-If there are multiple rows in your Animals file that have identical tag IDs (i.e., you have multiple records or measurements for one individual), ETAG will update the field data (FIXME: in progress for implementation).
+If there are multiple rows in your Tagged Data file that have identical tag IDs (i.e., you have multiple records or measurements for one individual), ETAG will update the field data (FIXME: in progress for implementation).
 
 These two behaviors provide a method to correct data via uploads.  You can also use the UI to correct them manually. 
 
