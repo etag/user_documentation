@@ -5,8 +5,6 @@ For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or 
 
 ### Fixme: put this text or link to it from ETAG main page.
 ### Fixme: screenshots after UI complete.
-### Fixme: check if location is required - specified in schema
-
 
 # Quick start guide: How do I use the ETAG website?
 
@@ -14,8 +12,8 @@ For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or 
 - Log in with your username and password.
 - Format three files following these templates and examples.
     - Tagged Data [template](https://osf.io/jzf3b/) example
-    - Reader Data [template][4] example
-    - RFID Reads [template][5] [example][6]
+    - Reader Data [template](https://osf.io/fv5cw/) example
+    - RFID Reads [template](https://osf.io/mxtue/) [example](https://osf.io/znd7u/)
 - Upload each file.
 - View your data (FIXME).
 
@@ -117,7 +115,7 @@ The "Antenna" tab allows you to input parameters and see the resulting RFID ante
 [1] https://osf.io/5dh3q/
 [2] https://osf.io/8gwjz/
 [3] 
-[4] https://osf.io/fv5cw/
-[5] https://osf.io/mxtue/
-[6] https://osf.io/znd7u/
+[4] 
+[5] 
+[6] 
 [7] https://www.postgresql.org/docs/9.3/datatype-datetime.html#DATATYPE-TIMESTAMPS
