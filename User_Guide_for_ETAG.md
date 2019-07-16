@@ -5,9 +5,9 @@ For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or 
 
 ### Fixme: put this text or link to it from ETAG main page.
 ### Fixme: screenshots after UI complete.
-### Fixme: change animals table to "tag data" and reader locations to "reader data" (check if location is required - specified in schema)
+### Fixme: check if location is required - specified in schema
 ### Fixme: check date requirement and describe it in instructions
-### Fixme: import csv in excel everything as text so it doesn't change date formatting or drop leading zeroes from RFID tag numbers.  OR add a column in R as it won't change anything in your formatting.
+
 
 # What is ETAG?
 The Electronic Transponder Analysis Gateway (ETAG) is a database and software system to provide professional data management and versatile data dissemination to the growing community of researchers who use Radio Frequency Identification (RFID) technology to advance biological inquiries in fields like animal behavior, ecological physiology, and community ecology. ETAG is an infrastructure based on open-source tools, allowing scientists to collect, validate, visualize, analyze, and share data in near real-time. ETAG facilitates new capacities both for producing novel science and for sharing data with fellow researchers and the general public. Our system will free up time from the management of data collection, analysis, and curation (currently done by hand), leaving researchers with more time for science. 
@@ -41,8 +41,8 @@ You should use ETAG if you have RFID reads with associated data on the tagged or
 ## Upload files
 Three comma-separated text files (.csv) are required by ETAG for upload.  ETAG understands (parses) data from certain fields to populate the database.
 
-- Tagged Data (formerly Animals)
-- Reader Locations = Reader Data
+- Tagged Data
+- Reader Data
 - RFID Reads
 
 
@@ -71,6 +71,8 @@ If you want to append data, you MUST upload all previous records plus your appen
 
 #### Tag reads
 Tag reads from 2019 or later Bridge Lab ETAG readers should conform to the ETAG database formatting standards and need no modification.  Output files from older Bridge lab or third-party readers may not conform to the ETAG database upload standards.  Please compare your files to the template files or to your exported files, make appropriate formatting changes to a copy of your original data, and upload the revised copies.
+
+If you make changes to your tag reads file in Excel, beware Excel's automatic csv import.  Manually set Excel to import everything as text.  Otherwise, Excel will change the date formatting or drop leading zeroes from RFID tag numbers.  An alternative is using R to add a column with the reader UUID (reader name).
 
 ### Automatically
 You can upload RFID Reads automatically to the ETAG portal using the API.  Duplicates should not occur because loading occurs real-time.  Tagged Data and Reader Data files must be uploaded manually before you allow RFID Reads to attempt loading.
