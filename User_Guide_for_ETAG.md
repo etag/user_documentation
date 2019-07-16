@@ -49,7 +49,7 @@ Three comma-separated text files (.csv) are required by ETAG for upload.  ETAG u
 You can upload these data files to ETAG manually (all three) or automatically (RFID Reads only).  Once you have Tagged Data and Reader Locations, you can upload the updated RFID Reads file as you get more reads.  We will use these filenames, but the filenames can be as you choose.
 
 ### Required fields
-Required fields are shown when you download the template from ETAG.  Your fields (columns) must have names exactly matching the template's required fields.  The template file is only shown when you do not have updates.  All extra columns in Tagged Data and Reader Locations will be put in JSON fields that store data in a single, queryable column per table (for Tagged Data and Reader Locations).  These extra columns are where you will put data such as animal measurements or sensor data accompanying tag reads.
+Required fields are shown when you download the template from ETAG.  Your fields (columns) must have names exactly matching the template's required fields.  The template file is only shown when you do not have updates.  All extra columns in Tagged Data and Reader Data will be put in JSON fields that store data in a single, queryable column per table (for Tagged Data and Reader Data).  These extra columns are where you will put data such as animal measurements or sensor data accompanying tag reads.
 
 ### Manually 
 Use the upload tab to load the three files.
@@ -67,13 +67,13 @@ If there are multiple rows in your Tagged Data file that have identical tag IDs 
 
 These two behaviors provide a method to correct data via uploads.  You can also use the UI to correct them manually. 
 
-If you want to append data, you MUST upload all previous records plus your appended items. You can export your existing records if you have misplaced your local files using the blue "Download data" button below your records.  Use that as a template to upload the corrected (in this case, appended) records for the tag ID (i.e. for the tagged animal).
+If you want to append data, you MUST upload all previous records plus your appended items. You can export your existing records if you have misplaced your local files using the blue "Download data" button below your records.  Use that as a template to upload the corrected (in this case, appended) records for the tag ID (i.e. for the tagged animal/item).
 
 #### Tag reads
 Tag reads from 2019 or later Bridge Lab ETAG readers should conform to the ETAG database formatting standards and need no modification.  Output files from older Bridge lab or third-party readers may not conform to the ETAG database upload standards.  Please compare your files to the template files or to your exported files, make appropriate formatting changes to a copy of your original data, and upload the revised copies.
 
 ### Automatically
-You can upload RFID Reads automatically to the ETAG portal using the API.  Duplicates should not occur because loading occurs real-time.  Animals and Reader Location files must be uploaded manually before you allow RFID Reads to attempt loading.
+You can upload RFID Reads automatically to the ETAG portal using the API.  Duplicates should not occur because loading occurs real-time.  Tagged Data and Reader Data files must be uploaded manually before you allow RFID Reads to attempt loading.
 
 #### Wired connection
 In development.
@@ -85,7 +85,7 @@ In development.
 You will likely want to download your data to use in local analyses or as a backup.  Here we describe how you can download your data and how we backup your data in the cloud and physically at the University of Oklahoma.
 
 ### Downloading your data (FIXME: currently needs work on separating columns, so do not test this part)
-You can download each data type (RFID Reads, Animals, and Reader Locations) as a .csv file from the three pages within the 'My ETAG Data' tab.
+You can download each data type (RFID Reads, Tagged Data, and Reader Data) as a .csv file from the three pages within the 'My ETAG Data' tab.
 
 ### ETAG automated backups
 The primary ETAG repository resides within Amazon Web Services (AWS) Relational Database Services (RDS).  The ETAG system will maintain an off-site backup copy of all data through the AWS Simple Storage Service (S3)
