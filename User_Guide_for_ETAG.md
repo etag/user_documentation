@@ -32,7 +32,7 @@ You should use ETAG if you have RFID reads with associated data on the tagged or
 2. Format three files following these templates and examples.
   - Tagged Data [template][3] example
   - Reader Data [template][4] example
-  - RFID Reads [template][5] example
+  - RFID Reads [template][5] [example][6]
 3. Upload each file.
 4. View your data (FIXME).
 
@@ -116,3 +116,4 @@ The "Antenna" tab allows you to input parameters and see the resulting RFID ante
 [3] https://osf.io/jzf3b/
 [4] https://osf.io/fv5cw/
 [5] https://osf.io/mxtue/
+[6] https://osf.io/znd7u/
