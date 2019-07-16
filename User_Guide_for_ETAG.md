@@ -1,6 +1,6 @@
 # User guide to Electronic Transponder Analysis Gateway
 
-## Last updated 11 July 2019
+## Last updated 16 July 2019
 For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or submit an issue on one of the repositories at https://github.com/etag .
 
 ### Fixme: put this text or link to it from ETAG main page.
@@ -28,13 +28,15 @@ You should use ETAG if you have RFID reads with associated data on the tagged or
 # Quick start guide: How do I use the ETAG website?
 
 1. Visit https://head.ouetag.org. 
+2. Log in with your username and password.
 2. Format three files following these templates and examples.
   - Tagged Data [template][3] example
   - Reader Data [template][4] example
   - RFID Reads [template][5] example
-3. Upload
+3. Upload each file.
+4. View your data (FIXME).
 
-# ETAG User Documentation
+# In depth documentation
 
 ## Create a (free!) account (FIXME)
 
