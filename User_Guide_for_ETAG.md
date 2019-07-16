@@ -8,6 +8,17 @@ For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or 
 ### Fixme: check if location is required - specified in schema
 ### Fixme: check date requirement and describe it in instructions
 
+# Quick start guide: How do I use the ETAG website?
+
+- Visit https://head.ouetag.org. 
+- Log in with your username and password.
+- Format three files following these templates and examples.
+  - Tagged Data [template][3] example
+  - Reader Data [template][4] example
+  - RFID Reads [template][5] [example][6]
+- Upload each file.
+- View your data (FIXME).
+ 
 
 # What is ETAG?
 The Electronic Transponder Analysis Gateway (ETAG) is a database and software system to provide professional data management and versatile data dissemination to the growing community of researchers who use Radio Frequency Identification (RFID) technology to advance biological inquiries in fields like animal behavior, ecological physiology, and community ecology. ETAG is an infrastructure based on open-source tools, allowing scientists to collect, validate, visualize, analyze, and share data in near real-time. ETAG facilitates new capacities both for producing novel science and for sharing data with fellow researchers and the general public. Our system will free up time from the management of data collection, analysis, and curation (currently done by hand), leaving researchers with more time for science. 
@@ -23,16 +34,7 @@ You should use ETAG if you have RFID reads with associated data on the tagged or
 - ETAG provides several visualizations that can be accessed via API for your lab website or outreach.
 - Data can be public OR private, allowing you to share data when you're ready.
 
-# Quick start guide: How do I use the ETAG website?
 
-1. Visit https://head.ouetag.org. 
-2. Log in with your username and password.
-2. Format three files following these templates and examples.
-  - Tagged Data [template][3] example
-  - Reader Data [template][4] example
-  - RFID Reads [template][5] [example][6]
-3. Upload each file.
-4. View your data (FIXME).
 
 # In depth documentation
 
