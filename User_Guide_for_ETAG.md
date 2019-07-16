@@ -5,10 +5,8 @@ For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or 
 
 ### Fixme: put this text or link to it from ETAG main page.
 ### Fixme: screenshots after UI complete.
-### Fixme: too long text.  Split out pages for quick instructions.  
 ### Fixme: change animals table to "tag data" and reader locations to "reader data" (check if location is required - specified in schema)
 ### Fixme: check date requirement and describe it in instructions
-### Fixme: link to templates and example data
 ### Fixme: import csv in excel everything as text so it doesn't change date formatting or drop leading zeroes from RFID tag numbers.  OR add a column in R as it won't change anything in your formatting.
 
 # What is ETAG?
