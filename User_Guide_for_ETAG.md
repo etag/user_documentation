@@ -25,9 +25,16 @@ You should use ETAG if you have RFID reads with associated data on the tagged or
 - ETAG provides several visualizations that can be accessed via API for your lab website or outreach.
 - Data can be public OR private, allowing you to share data when you're ready.
 
-# How do I use the ETAG website?
+# Quick start guide: How do I use the ETAG website?
 
-Visit https://head.ouetag.org. 
+1. Visit https://head.ouetag.org. 
+2. Format three files following these templates and examples.
+  - Tagged Data template example
+  - Reader Data template example
+  - RFID Reads template example
+3. Upload
+
+# ETAG User Documentation
 
 ## Create a (free!) account (FIXME)
 
