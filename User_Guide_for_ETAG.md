@@ -91,9 +91,9 @@ You will likely want to download your data to use in local analyses or as a back
 You can download each data type (RFID Reads, Tagged Data, and Reader Data) as a .csv file from the three pages within the 'My ETAG Data' tab.
 
 ### ETAG automated backups
-The primary ETAG repository resides within Amazon Web Services (AWS) Relational Database Services (RDS).  The ETAG system will maintain an off-site backup copy of all data through the AWS Simple Storage Service (S3)
+The primary ETAG repository resides within Amazon Web Services (AWS) Relational Database Services (RDS).  The ETAG system will maintain an off-site backup copy of all data through the AWS Simple Storage Service (S3).
 
-ETAG will generate two tape copies of all data on a weekly basis within the University of Oklahoma (OU) Petastore (FIXME: needs implementation)
+ETAG will generate two tape copies of all data on a weekly basis within the University of Oklahoma (OU) Petastore (FIXME: needs implementation).
 
 With three storage locations (main on AWS RDS,  backups on AWS S3, and weekly on the OU Petastore), even a simultaneous and catastrophic failure in 2/3 facilities will not result in the loss of ETAG data.
 
@@ -107,7 +107,7 @@ The ETAG portal currently offers three filters and two map types.
   - Summary of counts
   - Individual reads
 
-You can feature visualizations on your own website in Javascript Leaflet by pulling from the ETAG API.  We encourage sharing and welcome contributions to our [in development visualization code](https://osf.io/8gwjz/).  
+You can feature visualizations on your own website in Javascript Leaflet by pulling from the ETAG API.  We encourage sharing and welcome contributions via pull requests or issues to our [in development visualization code](https://osf.io/8gwjz/).  
 
 ## Design a RFID antenna (FIXME: in progress)
 The "Antenna" tab allows you to input parameters and see the resulting RFID antenna.  Please contact Dr. J. Ruyle (ruyle@ou.edu) or Dr. E. Bridge (ebridge@ou.edu) if you have questions about antenna design.
