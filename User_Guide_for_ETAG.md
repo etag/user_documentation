@@ -8,17 +8,6 @@ For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or 
 ### Fixme: check if location is required - specified in schema
 ### Fixme: check date requirement and describe it in instructions
 
-# Quick start guide: How do I use the ETAG website?
-
-- Visit https://head.ouetag.org. 
-- Log in with your username and password.
-- Format three files following these templates and examples.
-  - Tagged Data [template][3] example
-  - Reader Data [template][4] example
-  - RFID Reads [template][5] [example][6]
-- Upload each file.
-- View your data (FIXME).
- 
 
 # What is ETAG?
 The Electronic Transponder Analysis Gateway (ETAG) is a database and software system to provide professional data management and versatile data dissemination to the growing community of researchers who use Radio Frequency Identification (RFID) technology to advance biological inquiries in fields like animal behavior, ecological physiology, and community ecology. ETAG is an infrastructure based on open-source tools, allowing scientists to collect, validate, visualize, analyze, and share data in near real-time. ETAG facilitates new capacities both for producing novel science and for sharing data with fellow researchers and the general public. Our system will free up time from the management of data collection, analysis, and curation (currently done by hand), leaving researchers with more time for science. 
@@ -34,7 +23,16 @@ You should use ETAG if you have RFID reads with associated data on the tagged or
 - ETAG provides several visualizations that can be accessed via API for your lab website or outreach.
 - Data can be public OR private, allowing you to share data when you're ready.
 
+# Quick start guide: How do I use the ETAG website?
 
+1. Visit https://head.ouetag.org. 
+2. Log in with your username and password.
+2. Format three files following these templates and examples.
+  - Tagged Data [template][3] example
+  - Reader Data [template][4] example
+  - RFID Reads [template][5] [example][6]
+3. Upload each file.
+4. View your data (FIXME).
 
 # In depth documentation
 
@@ -73,6 +71,8 @@ If you want to append data, you MUST upload all previous records plus your appen
 
 #### Tag reads
 Tag reads from 2019 or later Bridge Lab ETAG readers should conform to the ETAG database formatting standards and need no modification.  Output files from older Bridge lab or third-party readers may not conform to the ETAG database upload standards.  Please compare your files to the template files or to your exported files, make appropriate formatting changes to a copy of your original data, and upload the revised copies.
+
+Time stamps must be in the formats described in the database documentation section [8.5.1.3. Time Stamps][7]
 
 If you make changes to your tag reads file in Excel, beware Excel's automatic csv import.  Manually set Excel to import everything as text.  Otherwise, Excel will change the date formatting or drop leading zeroes from RFID tag numbers.  An alternative is using R to add a column with the reader UUID (reader name).
 
@@ -119,3 +119,4 @@ The "Antenna" tab allows you to input parameters and see the resulting RFID ante
 [4] https://osf.io/fv5cw/
 [5] https://osf.io/mxtue/
 [6] https://osf.io/znd7u/
+[7] https://www.postgresql.org/docs/9.3/datatype-datetime.html#DATATYPE-TIMESTAMPS
