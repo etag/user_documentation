@@ -29,9 +29,9 @@ You should use ETAG if you have RFID reads with associated data on the tagged or
 
 1. Visit https://head.ouetag.org. 
 2. Format three files following these templates and examples.
-  - Tagged Data template example
-  - Reader Data template example
-  - RFID Reads template example
+  - Tagged Data [template][3] example
+  - Reader Data [template][4] example
+  - RFID Reads [template][5] example
 3. Upload
 
 # ETAG User Documentation
@@ -111,3 +111,6 @@ The "Antenna" tab allows you to input parameters and see the resulting RFID ante
 
 [1] https://osf.io/5dh3q/
 [2] https://osf.io/8gwjz/
+[3] https://osf.io/jzf3b/
+[4] https://osf.io/fv5cw/
+[5] https://osf.io/mxtue/
