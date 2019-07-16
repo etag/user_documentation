@@ -71,7 +71,7 @@ Reader Data does not require a GPS point, but will only be available for visuali
 #### Tag reads
 Tag reads from 2019 or later Bridge Lab ETAG readers should conform to the ETAG database formatting standards and need no modification.  Output files from older Bridge lab or third-party readers may not conform to the ETAG database upload standards.  Please compare your files to the template files or to your exported files, make appropriate formatting changes to a copy of your original data, and upload the revised copies.
 
-Time stamps must be in the formats described in the database documentation section [8.5.1.3. Time Stamps][7]
+Time stamps must be in the formats described in the database documentation section [8.5.1.3. Time Stamps](https://www.postgresql.org/docs/9.3/datatype-datetime.html#DATATYPE-TIMESTAMPS)
 
 If you make changes to your tag reads file in Excel, beware Excel's automatic csv import.  Manually set Excel to import everything as text.  Otherwise, Excel will change the date formatting or drop leading zeroes from RFID tag numbers.  An alternative is using R to add a column with the reader UUID (reader name).
 
@@ -82,7 +82,7 @@ You can upload RFID Reads automatically to the ETAG portal using the API.  Dupli
 In development.
 
 #### Wireless connection
-[In development] [1]
+[In development](https://osf.io/5dh3q/)
 
 ## Exports, downloads, and backups
 You will likely want to download your data to use in local analyses or as a backup.  Here we describe how you can download your data and how we backup your data in the cloud and physically at the University of Oklahoma.
@@ -107,15 +107,7 @@ The ETAG portal currently offers three filters and two map types.
   - Summary of counts
   - Individual reads
 
-You can feature visualizations on your own website in Javascript Leaflet by pulling from the ETAG API.  We encourage sharing and welcome contributions to our [in development visualization code][2].  
+You can feature visualizations on your own website in Javascript Leaflet by pulling from the ETAG API.  We encourage sharing and welcome contributions to our [in development visualization code](https://osf.io/8gwjz/).  
 
 ## Design a RFID antenna (FIXME: in progress)
 The "Antenna" tab allows you to input parameters and see the resulting RFID antenna.  Please contact Dr. J. Ruyle (ruyle@ou.edu) or Dr. E. Bridge (ebridge@ou.edu) if you have questions about antenna design.
-
-[1] https://osf.io/5dh3q/
-[2] https://osf.io/8gwjz/
-[3] 
-[4] 
-[5] 
-[6] 
-[7] https://www.postgresql.org/docs/9.3/datatype-datetime.html#DATATYPE-TIMESTAMPS
