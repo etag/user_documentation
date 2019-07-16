@@ -52,7 +52,7 @@ You can upload these data files to ETAG manually (all three) or automatically (R
 Required fields are shown when you download the template from ETAG.  Your fields (columns) must have names exactly matching the template's required fields.  The template file is only shown when you do not have updates.  All extra columns in Tagged Data and Reader Locations will be put in JSON fields that store data in a single, queryable column per table (for Tagged Data and Reader Locations).  These extra columns are where you will put data such as animal measurements or sensor data accompanying tag reads.
 
 ### Manually 
-Use the upload tab to load the three files.  Visit our OSF page to see example data formatted correctly (same as the templates).  *LINK HERE*.
+Use the upload tab to load the three files.
 
 #### Tagged Data
 ##### Upload
