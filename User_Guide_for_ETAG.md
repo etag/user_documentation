@@ -13,7 +13,7 @@ For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or 
 - Visit https://head.ouetag.org. 
 - Log in with your username and password.
 - Format three files following these templates and examples.
-    - Tagged Data [template][3] example
+    - Tagged Data [template](https://osf.io/jzf3b/) example
     - Reader Data [template][4] example
     - RFID Reads [template][5] [example][6]
 - Upload each file.
@@ -116,7 +116,7 @@ The "Antenna" tab allows you to input parameters and see the resulting RFID ante
 
 [1] https://osf.io/5dh3q/
 [2] https://osf.io/8gwjz/
-[3] https://osf.io/jzf3b/
+[3] 
 [4] https://osf.io/fv5cw/
 [5] https://osf.io/mxtue/
 [6] https://osf.io/znd7u/
