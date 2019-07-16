@@ -13,9 +13,9 @@ For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or 
 1. Visit https://head.ouetag.org. 
 2. Log in with your username and password.
 2. Format three files following these templates and examples.
-  - Tagged Data [template][3] example
-  - Reader Data [template][4] example
-  - RFID Reads [template][5] [example][6]
+  a. Tagged Data [template][3] example
+  b. Reader Data [template][4] example
+  c. RFID Reads [template][5] [example][6]
 3. Upload each file.
 4. View your data (FIXME).
 
