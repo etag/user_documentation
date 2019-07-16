@@ -6,8 +6,6 @@ For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or 
 ### Fixme: put this text or link to it from ETAG main page.
 ### Fixme: screenshots after UI complete.
 ### Fixme: check if location is required - specified in schema
-### Fixme: check date requirement and describe it in instructions
-
 
 # What is ETAG?
 The Electronic Transponder Analysis Gateway (ETAG) is a database and software system to provide professional data management and versatile data dissemination to the growing community of researchers who use Radio Frequency Identification (RFID) technology to advance biological inquiries in fields like animal behavior, ecological physiology, and community ecology. ETAG is an infrastructure based on open-source tools, allowing scientists to collect, validate, visualize, analyze, and share data in near real-time. ETAG facilitates new capacities both for producing novel science and for sharing data with fellow researchers and the general public. Our system will free up time from the management of data collection, analysis, and curation (currently done by hand), leaving researchers with more time for science. 
@@ -52,7 +50,7 @@ You can upload these data files to ETAG manually (all three) or automatically (R
 Required fields are shown when you download the template from ETAG.  Your fields (columns) must have names exactly matching the template's required fields.  The template file is only shown when you do not have updates.  All extra columns in Tagged Data and Reader Data will be put in JSON fields that store data in a single, queryable column per table (for Tagged Data and Reader Data).  These extra columns are where you will put data such as animal measurements or sensor data accompanying tag reads.
 
 ### Manually 
-Use the upload tab to load the three files.
+Use the upload tab to load the three files.  Tagged Data and Reader Data are only uploaded manually.
 
 #### Tagged Data
 ##### Upload
@@ -68,6 +66,9 @@ If there are multiple rows in your Tagged Data file that have identical tag IDs 
 These two behaviors provide a method to correct data via uploads.  You can also use the UI to correct them manually. 
 
 If you want to append data, you MUST upload all previous records plus your appended items. You can export your existing records if you have misplaced your local files using the blue "Download data" button below your records.  Use that as a template to upload the corrected (in this case, appended) records for the tag ID (i.e. for the tagged animal/item).
+
+#### Reader Data
+Reader Data does not require a GPS point, but will only be available for visualization if GPS points are provided.
 
 #### Tag reads
 Tag reads from 2019 or later Bridge Lab ETAG readers should conform to the ETAG database formatting standards and need no modification.  Output files from older Bridge lab or third-party readers may not conform to the ETAG database upload standards.  Please compare your files to the template files or to your exported files, make appropriate formatting changes to a copy of your original data, and upload the revised copies.
