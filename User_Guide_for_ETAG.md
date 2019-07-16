@@ -97,7 +97,7 @@ ETAG will generate two tape copies of all data on a weekly basis within the Univ
 
 With three storage locations (main on AWS RDS,  backups on AWS S3, and weekly on the OU Petastore), even a simultaneous and catastrophic failure in 2/3 facilities will not result in the loss of ETAG data.
 
-## Visualize data (FIXME: needs implementation)
+## Visualize data (FIXME: [have drafts](https://osf.io/8gwjz/), needs implementation)
 The ETAG portal currently offers three filters and two map types.
 - Filter by
   - Species
