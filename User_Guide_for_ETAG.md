@@ -3,7 +3,6 @@
 ## Last updated 17 July 2019
 For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or submit an issue on one of the repositories at https://github.com/etag .
 
-### Fixme: put this text or link to it from ETAG main page.
 ### Fixme: screenshots after UI complete.
 
 # Quick start guide: How do I use the ETAG website?
