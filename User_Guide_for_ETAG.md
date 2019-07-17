@@ -8,7 +8,7 @@ For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or 
 
 # Quick start guide: How do I use the ETAG website?
 
-- Visit https://head.ouetag.org. 
+- Visit https://head.ouetag.org 
 - Log in with your username and password.
 - Format three files following these templates and examples.
     - Tagged Data: [template](https://osf.io/jzf3b/),  example
