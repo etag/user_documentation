@@ -1,7 +1,7 @@
 # User guide to Electronic Transponder Analysis Gateway
 
 ## Last updated 17 July 2019
-For assistance or bug reports, please contact Claire Curry (cmcurry@ou.edu), or submit an issue on one of the repositories at https://github.com/etag .
+For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag).
 
 ### Fixme: screenshots after UI complete.
 
@@ -32,7 +32,7 @@ You should use ETAG if you have RFID reads with associated data on the tagged or
 - ETAG provides several visualizations that can be accessed via API for your lab website or outreach.
 - Data can be public OR private, allowing you to share data when you're ready.
 
-## Create a (free!) account (FIXME)
+## Create an account (FIXME)
 
 ## Upload files
 Three comma-separated text files (.csv) are required by ETAG for upload.  ETAG understands (parses) data from certain fields to populate the database.
