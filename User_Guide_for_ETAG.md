@@ -1,6 +1,6 @@
 # User guide to Electronic Transponder Analysis Gateway
 
-## Last updated 17 July 2019
+## Last updated 25 July 2019
 For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag).
 
 ### Fixme: screenshots after UI complete.
@@ -57,11 +57,11 @@ When you upload your Tagged Data file, the code checks a list of the user's exis
 If the tag ID doesn't exist, ETAG adds the tag ID to the database.  If the tag exists but the user doesn't own it, you cannot update the data for that tag ID.  The API currently gives an error (FIXME: Tyler will add what the message is) but not the user interface (UI), so for you as an end user it will simply not upload.  The remainder of your csv file will upload normally.
 
 ##### Correcting and appending records
-If the tag ID matches one of your owned tags in the database, ETAG will check all other fields for your Tagged Data file.  If there are differences, ETAG will UPDATE BY OVERWRITING.
+If the tag ID matches one of your owned tags in the database, ETAG will check all other fields for your Tagged Data file.  If there are differences, ETAG will UPDATE BY OVERWRITING individual tag records.  If you upload a file where you have deleted a record, ETAG will not remove that record from the database - you must delete it manually through the ETAG editing interface.  (ETAG is not comparing the csv files to each other, but matching records from your csv to data that has already been processed into the database.)
 
 If there are multiple rows in your Tagged Data file that have identical tag IDs (i.e., you have multiple records or measurements for one individual), ETAG will update the field data (FIXME: in progress for implementation).
 
-These two behaviors provide a method to correct data via uploads.  You can also use the UI to correct them manually. 
+These two behaviors provide a method to correct data via uploads.  You can also use the UI to correct them manually, as for deletions. 
 
 If you want to append data, you MUST upload all previous records plus your appended items. You can export your existing records if you have misplaced your local files using the blue "Download data" button below your records.  Use that as a template to upload the corrected (in this case, appended) records for the tag ID (i.e. for the tagged animal/item).
 
