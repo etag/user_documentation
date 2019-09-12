@@ -1,7 +1,7 @@
 # User guide to Electronic Transponder Analysis Gateway
 
-## Last updated 25 July 2019
-For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag).
+## Last updated 12 September 2019
+For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag) for the visualizations (FIXME: link), [web portal](https://github.com/etag/portal_vue), [data import](https://github.com/etag/etagq), or [interacting with the API](https://github.com/etag/etag-api).
 
 ### Fixme: screenshots after UI complete.
 
