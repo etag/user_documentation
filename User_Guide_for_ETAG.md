@@ -1,7 +1,7 @@
 # User guide to Electronic Transponder Analysis Gateway
 
 ## Last updated 10 October 2019
-For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag) for the visualizations (FIXME: link), [web portal](https://github.com/etag/portal_vue), [data import](https://github.com/etag/etagq), or [interacting with the API](https://github.com/etag/etag-api).
+For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag) for the [visualizations](https://github.com/etag/leaflet-map-practice), [web portal](https://github.com/etag/portal_vue), [data import](https://github.com/etag/etagq), or [interacting with the API](https://github.com/etag/etag-api).
 
 ### Fixme: screenshots after UI complete.
 
@@ -10,7 +10,7 @@ For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or
 - Visit [ETAG](https://head.ouetag.org).
 - FIXME: Get a username and password if you don't have one.
 - Log in with your username and password.
-- Format three files following these templates and examples.  See the In depth documentation, below, for details on what the fields/columns represent.
+- Format three files following these templates and examples.  See the *In depth documentation*, below, for details on what the fields/columns represent.
     - Tagged Data: [template](https://osf.io/jzf3b/),  example
     - Reader Data: [template](https://osf.io/fv5cw/),   example
     - RFID Reads: [template](https://osf.io/mxtue/), [example](https://osf.io/znd7u/)
