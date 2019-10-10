@@ -88,8 +88,8 @@ In development.
 ## Exports, downloads, and backups
 You will likely want to download your data to use in local analyses or as a backup.  Here we describe how you can download your data and how we backup your data in the cloud and physically at the University of Oklahoma.
 
-### Downloading your data (FIXME: currently needs work on separating columns, so do not test this part)
-You can download each data type (RFID Reads, Tagged Data, and Reader Data) as a .csv file from the three pages within the 'My ETAG Data' tab.
+### Downloading your data
+You can export and download your data as three .csv files (RFID Reads, Tagged Data, and Reader Data) from the corresponding pages within the 'My ETAG Data' tab.
 
 ### ETAG automated backups
 The primary ETAG repository resides within Amazon Web Services (AWS) Relational Database Services (RDS).  The ETAG system will maintain an off-site backup copy of all data through the AWS Simple Storage Service (S3).
