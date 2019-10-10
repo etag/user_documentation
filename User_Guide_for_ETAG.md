@@ -1,6 +1,6 @@
 # User guide to Electronic Transponder Analysis Gateway
 
-## Last updated 12 September 2019
+## Last updated 10 October 2019
 For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag) for the visualizations (FIXME: link), [web portal](https://github.com/etag/portal_vue), [data import](https://github.com/etag/etagq), or [interacting with the API](https://github.com/etag/etag-api).
 
 ### Fixme: screenshots after UI complete.
@@ -10,7 +10,7 @@ For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or
 - Visit [ETAG](https://head.ouetag.org).
 - FIXME: Get a username and password if you don't have one.
 - Log in with your username and password.
-- Format three files following these templates and examples.
+- Format three files following these templates and examples.  See the In depth documentation, below, for details on what the fields/columns represent.
     - Tagged Data: [template](https://osf.io/jzf3b/),  example
     - Reader Data: [template](https://osf.io/fv5cw/),   example
     - RFID Reads: [template](https://osf.io/mxtue/), [example](https://osf.io/znd7u/)
@@ -66,7 +66,8 @@ These two behaviors provide a method to correct data via uploads.  You can also 
 If you want to append data, you MUST upload all previous records plus your appended items. You can export your existing records if you have misplaced your local files using the blue "Download data" button below your records.  Use that as a template to upload the corrected (in this case, appended) records for the tag ID (i.e. for the tagged animal/item).
 
 #### Reader Data
-Reader Data does not require a GPS point, but will only be available for visualization if GPS points are provided.
+Reader Data does not require a GPS point, but readers will only be available for visualization if GPS points are provided.  The tag ID is the RFID tag identifying number.  The UUID is the reader identifying number (i.e., the reader's "name").  If you don’t have a reader UUID, we recommend using your username (which is required to be unique) and adding a number after it.
+
 
 #### Tag reads
 Tag reads from 2019 or later Bridge Lab ETAG readers should conform to the ETAG database formatting standards and need no modification.  Output files from older Bridge lab or third-party readers may not conform to the ETAG database upload standards.  Please compare your files to the template files or to your exported files, make appropriate formatting changes to a copy of your original data, and upload the revised copies.
