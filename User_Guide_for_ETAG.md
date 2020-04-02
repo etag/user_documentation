@@ -11,8 +11,8 @@ For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or
 - FIXME: Get a username and password if you don't have one.
 - Log in with your username and password.
 - Format three files following these templates and examples.  See the *In depth documentation*, below, for details on what the fields/columns represent.
-    - Tagged Data: [template](https://osf.io/jzf3b/),  example 1 (https://osf.io/4m8k2/), [example 2]](https://osf.io/hkmce/)
-    - Reader Data: [template](https://osf.io/fv5cw/),   example (https://osf.io/wgbty/)
+    - Tagged Data: [template](https://osf.io/jzf3b/),  [example 1](https://osf.io/4m8k2/), [example 2](https://osf.io/hkmce/)
+    - Reader Data: [template](https://osf.io/fv5cw/),   [example](https://osf.io/wgbty/)
     - RFID Reads: [template](https://osf.io/mxtue/), [example 1](https://osf.io/t4by2/), [example 2]](https://osf.io/t53jf/)
 - Upload each file.
 - View your data (FIXME).
