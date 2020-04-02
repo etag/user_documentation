@@ -111,4 +111,4 @@ The ETAG portal currently offers three filters and two map types.
 You can feature visualizations on your own website in Javascript Leaflet by pulling from the ETAG API.  We encourage sharing and welcome contributions via pull requests or issues to our [in development visualization code](https://osf.io/8gwjz/).  
 
 ## Design a RFID antenna (FIXME: in progress)
-The "Antenna" tab allows you to input parameters and see the resulting RFID antenna.  Please contact Dr. J. Ruyle (ruyle@ou.edu) or Dr. E. Bridge (ebridge@ou.edu) if you have questions about antenna design.
+The "Antenna" tab allows you to input parameters and see the resulting RFID antenna.  Please contact Dr. J. Ruyle (ruyle@ou.edu) or Dr. E. Bridge (ebridge@ou.edu) if you have questions about antenna design.  Please add an issue to portal_nuxt regarding [this page](https://github.com/etag/portal_nuxt/blob/test/pages/antenna.vue) if you have suggested modifications to the antenna visualization.
