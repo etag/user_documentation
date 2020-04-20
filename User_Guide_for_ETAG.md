@@ -1,26 +1,24 @@
 # User guide to Electronic Transponder Analysis Gateway
 
-## Last updated 02 April 2020
+## Last updated 20 April 2020
 For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag) for the [visualizations and web portal](https://github.com/etag/portal_nuxt), [data import](https://github.com/etag/etagq), or [interacting with the API](https://github.com/etag/etag-api).
-
-### Fixme: screenshots after UI complete.
 
 # Quick start guide: How do I use the ETAG website? 
 
 1. Visit [ETAG](https://head.ouetag.org).
 1. FIXME: Get a username and password if you don't have one.
 1. Log in with your username and password.
-1. Format three files types following these templates and examples.  Your files need to have exactly the same column headers and be in .csv format as each example file.  It is easiest to paste your data into the template in a spreadsheet program such as Microsoft Excel or LibreOffice Calculate.  (See formatting)[https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#required-fields], for details on what the fields/columns represent and how they must be formatted.  You must have Tagged Data and Reader Data to associated with RFID Reads.
-    - Tagged Data: [template](https://osf.io/jzf3b/),  [example 1](https://osf.io/4m8k2/), [example 2](https://osf.io/hkmce/)
-    - Reader Data: [template](https://osf.io/fv5cw/),   [example](https://osf.io/wgbty/)
-    - RFID Reads: [template](https://osf.io/mxtue/), [example 1](https://osf.io/t4by2/), [example 2](https://osf.io/t53jf/)
-    1. 
+1. Format the following three files types following these templates and examples.  Your files need to have (at minimum) exactly the same column headers and be in .csv format as each example file.  Extra columns are acceptable in Tagged Data and RFID Reads and will be kept as "field data" or "accessory data".  (See formatting)[https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#required-fields], for details on what the fields/columns represent and how they must be formatted.  It is easiest to paste your data into the template in a spreadsheet program such as Microsoft Excel or LibreOffice Calculate.  
+    - Upload first (any order)
+        - Tagged Data: [template](https://osf.io/jzf3b/),  [example 1](https://osf.io/4m8k2/), [example 2](https://osf.io/hkmce/)
+        - Reader Data: [template](https://osf.io/fv5cw/),   [example](https://osf.io/wgbty/)
+    - Upload last: RFID Reads: [template](https://osf.io/mxtue/), [example 1](https://osf.io/t4by2/), [example 2](https://osf.io/t53jf/)
 1. [Upload each file](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#upload-files).
 1. View your data (FIXME).
 1. [Edit your data](FIXME) as needed.
 1. Use your data via [API calls](https://docs.google.com/document/d/1gWJlPUpfzh5vDinRFyxtkYlA4elWybNfmVASIK7C4wY/edit?usp=sharing).
 1. Export your data via [.csv downloads](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#downloading-your-data ).
-1. Have a question about the details of ETAG functionality?  Check below or contact our [help wiki]().
+1. Have a question about the details of ETAG functionality?  Check below or contact our [help wiki](https://osf.io/zbd63/wiki/).
 
 # In depth documentation
 # What is ETAG?
@@ -35,6 +33,7 @@ You should use ETAG if you have RFID reads with associated data on the tagged or
 # Why should I use ETAG instead of my own personal data management system?
 - Using ETAG's already designed, standardized database will save you time on managing your own database.
 - ETAG provides several visualizations that can be accessed via API for your lab website or outreach.
+- Data from all of your studies can be pulled from the database at once with API calls in R or Python.
 - Data can be public OR private, allowing you to share data when you're ready.
 
 ## Create an account (FIXME)
@@ -44,22 +43,22 @@ Three comma-separated text files (.csv) are required by ETAG for upload.  ETAG u
 
 - Tagged Data
 - Reader Data
-- RFID Reads
+- RFID Reads (needs previous two files uploaded first)
 
 
-You can upload these data files to ETAG manually (all three) or automatically (RFID Reads only).  Once you have Tagged Data and Reader Locations, you can upload the updated RFID Reads file as you get more reads.  We will use these filenames, but the filenames can be as you choose.
+You can upload these data files to ETAG manually (all three) or automatically (RFID Reads only).  Once you have Tagged Data and Reader Locations, you can upload the updated RFID Reads file or additional non-overlapping RFID Reads files as you get more reads.  We will use these filenames, but the filenames are not standardized in the system.  Files are deleted from the server after being put into the database, so your data exists, but only in the database.
 
 ### Required fields
-Required fields are shown when you download the template from ETAG.  Your fields (columns) must have names exactly matching the template's required fields.  The template file is only shown when you do not have updates.  All extra columns in Tagged Data and Reader Data will be put in JSON fields that store data in a single, queryable column per table (for Tagged Data and Reader Data).  These extra columns are where you will put data such as animal measurements or sensor data accompanying tag reads.
+Required fields are shown when you download the template from ETAG.  Your fields (columns) must have names exactly matching the template's required fields, including capitalization and punctuation such as underscores.  All extra columns in Tagged Data and Reader Data will be put in JSON fields that store data in a single, queryable column per table (for Tagged Data: "Field Data" and Reader Data: "Accessory Data").  These extra columns are where you will put data such as animal measurements or sensor data accompanying tag reads.
 
 ### Manually 
-Use the upload tab to load the three files manually.  Tagged Data and Reader Data can only be uploaded manually.
+Use named tabs to load any of the three files manually.  Tagged Data and Reader Data can only be uploaded manually and must be uploaded before RFID Reads.  If you have uploaded previous Tagged Data or Reader Data, then you can upload new RFID Reads without repeating that step for the same study.
 
 #### Tagged Data
 ##### Upload
-When you upload your Tagged Data file, the code checks a list of the user's existing owned tag IDs versus the tag IDs in the csv.
+When you upload your Tagged Data file, the code checks a list of the user's existing owned tag IDs versus the tag IDs in your .csv file.
 
-If the tag ID doesn't exist, ETAG adds the tag ID to the database.  If the tag exists but the user doesn't own it, you cannot update the data for that tag ID.  The API currently gives an error (FIXME: Tyler will add what the message is) but not the user interface (UI), so for you as an end user it will simply not upload.  The remainder of your csv file will upload normally.
+If the tag ID doesn't exist, ETAG adds the tag ID to the database.  If the tag exists but you (the user) don't "own" it, you cannot update the data for that tag ID. This would happen if someone else has already uploaded that tag ID (perhaps someone else in your research group, or another research group if you detected their animal). The API currently gives an error (FIXME: Tyler will add what the message is) but not the user interface (UI), so for you as an end user it will simply not upload.  The remainder of your .csv file will upload normally.
 
 ##### Correcting and appending records
 If the tag ID matches one of your owned tags in the database, ETAG will check all other fields for your Tagged Data file.  If there are differences, ETAG will UPDATE BY OVERWRITING individual tag records.  If you upload a file where you have deleted a record, ETAG will not remove that record from the database - you must delete it manually through the ETAG editing interface.  (ETAG is not comparing the csv files to each other, but matching records from your csv to data that has already been processed into the database.)
@@ -71,18 +70,18 @@ These two behaviors provide a method to correct data via uploads.  You can also 
 If you want to append data, you MUST upload all previous records plus your appended items. You can export your existing records if you have misplaced your local files using the blue "Download data" button below your records.  Use that as a template to upload the corrected (in this case, appended) records for the tag ID (i.e. for the tagged animal/item).
 
 #### Reader Data
-Reader Data does not require a GPS point, but readers will only be available for visualization if GPS points are provided.  The tag ID is the RFID tag identifying number.  The UUID is the reader identifying number (i.e., the reader's "name").  If you don’t have a reader UUID, we recommend using your username (which is required to be unique) and adding a number after it.
+Reader Data does not require a GPS point, but RFID Reads will only be available for visualization if GPS points are provided.  The tag ID is the RFID tag identifying number.  The UUID is the reader identifying number (i.e., the reader's "name").  If you don’t have a reader UUID, we recommend using your username (which is required to be unique) and adding sequential numbers after it for each reader.  Start and end date columns allow for you to use the same reader for different projects by specifying when the reader should be associated with which RFID read data.
 
 
 #### Tag reads
-Tag reads from 2019 or later Bridge Lab ETAG readers should conform to the ETAG database formatting standards and need no modification.  Output files from older Bridge lab or third-party readers may not conform to the ETAG database upload standards.  Please compare your files to the template files or to your exported files, make appropriate formatting changes to a copy of your original data, and upload the revised copies.
+Tag reads from 2019 or later Bridge Lab ETAG readers should conform to the ETAG database formatting standards and need no modification.  Output files from older Bridge lab or third-party readers likely will not conform to the ETAG database upload standards.  Please compare your files to the template files or to your exported files, make appropriate formatting changes to a copy of your original data, and upload the revised copies.
 
 Time stamps must be in the formats described in the database documentation section [8.5.1.3. Time Stamps](https://www.postgresql.org/docs/9.3/datatype-datetime.html#DATATYPE-TIMESTAMPS)
 
 If you make changes to your tag reads file in Excel, beware Excel's automatic csv import.  Manually set Excel to import everything as text.  Otherwise, Excel will change the date formatting or drop leading zeroes from RFID tag numbers.  An alternative is using R to add a column with the reader UUID (reader name).
 
 ### Automatically
-You can upload RFID Reads automatically to the ETAG portal using the API.  Duplicates should not occur because loading occurs real-time.  Tagged Data and Reader Data files must be uploaded manually before you allow RFID Reads to attempt loading.
+You can upload RFID Reads automatically to the ETAG portal using the API and your authentication token.  Duplicates should not occur because loading occurs real-time.  Tagged Data and Reader Data files must be uploaded manually before you allow RFID Reads to attempt loading.  This feature is in development and not currently available.
 
 #### Wired connection
 In development.
@@ -97,23 +96,28 @@ You will likely want to download your data to use in local analyses or as a back
 You can export and download your data as three .csv files (RFID Reads, Tagged Data, and Reader Data) from each tab (Reader Data, RFID Reads, and Tagged Data, respectively) by clicking on the "Download Data" button (bottom right).
 
 ### ETAG automated backups
-The primary ETAG repository resides within Amazon Web Services (AWS) Relational Database Services (RDS).  The ETAG system will maintain an off-site backup copy of all data through the AWS Simple Storage Service (S3).
+The primary ETAG repository resides within Amazon Web Services (AWS) Relational Database Services (RDS).  The ETAG system will maintain an off-site backup copy of all data through weekly backups with AWS Simple Storage Service (S3).
 
-ETAG will generate two tape copies of all data on a weekly basis within the University of Oklahoma (OU) Petastore (FIXME: needs implementation).
+ETAG will generate two tape copies of all data on a monthly basis within the University of Oklahoma (OU) OURRstore (FIXME: needs implementation).
 
-With three storage locations (main on AWS RDS,  backups on AWS S3, and weekly on the OU Petastore), even a simultaneous and catastrophic failure in 2/3 facilities will not result in the loss of ETAG data.
+With three storage locations (main on AWS RDS, weekly backups on AWS S3, and weekly on the OU Petastore), even a simultaneous and catastrophic failure in 2/3 of facilities will not result in the loss of ETAG data.  Hopefully, most users will also keep local copies of their data for 4 locations for any given dataset.
 
-## Visualize data (FIXME: [have drafts](https://osf.io/8gwjz/), needs implementation)
-The ETAG portal currently offers three filters and two map types.
+## Visualize data
+The ETAG portal currently offers two data types, two options for tag read displays, and four filters.
+- Data types
+    - Readers
+    - Tag reads
+- Tag reads display options
+    - Summaries (count per location)
+    - Raw tag reads Individual reads
 - Filter by
-  - Species
-  - RFID reader
-  - RFID tag ID
-- Map types
-  - Summary of counts
-  - Individual reads
+    - Species
+    - RFID tag ID
+    - Data privacy (all public data or only your data)
+    - Date minimum and maximum
 
-You can feature visualizations on your own website in Javascript Leaflet by pulling from the ETAG API.  We encourage sharing and welcome contributions via pull requests or issues to our [in development visualization code](https://osf.io/8gwjz/).  
+
+You can feature visualizations on your own website by pulling from the ETAG API.  For example, [sample R code to call from the API](https://osf.io/qe53h/) could be used in combination with an [RShiny site](https://shiny.rstudio.com/).  We encourage sharing and welcome contributions via pull requests or issues to our [in development visualization code](https://osf.io/8gwjz/).  
 
 ## Design a RFID antenna (FIXME: in progress)
 The "Antenna" tab allows you to input parameters and see the resulting RFID antenna.  Please contact Dr. J. Ruyle (ruyle@ou.edu) or Dr. E. Bridge (ebridge@ou.edu) if you have questions about antenna design.  Please add an issue to portal_nuxt regarding [this page](https://github.com/etag/portal_nuxt/blob/test/pages/antenna.vue) if you have suggested modifications to the antenna visualization.
