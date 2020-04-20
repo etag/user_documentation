@@ -8,17 +8,17 @@ For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or
 1. Visit [ETAG](https://head.ouetag.org).
 1. FIXME: Get a username and password if you don't have one.
 1. Log in with your username and password.
-1. Format the following three files types following these templates and examples.  Your files need to have (at minimum) exactly the same column headers and be in .csv format as each example file.  Extra columns are acceptable in Tagged Data and RFID Reads and will be kept as "field data" or "accessory data".  (See formatting)[https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#required-fields], for details on what the fields/columns represent and how they must be formatted.  It is easiest to paste your data into the template in a spreadsheet program such as Microsoft Excel or LibreOffice Calculate.  
+1. Format the following three files types following these templates and examples.  Your files need to have (at minimum) exactly the same column headers and be in .csv format as each example file.  Extra columns are acceptable in Tagged Data and RFID Reads and will be kept as "field data" or "accessory data".  [See formatting](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#required-fields), for details on what the fields/columns represent and how they must be formatted.  It is easiest to paste your data into the template in a spreadsheet program such as Microsoft Excel or LibreOffice Calculate.  
     - Upload first (any order)
         - Tagged Data: [template](https://osf.io/jzf3b/),  [example 1](https://osf.io/4m8k2/), [example 2](https://osf.io/hkmce/)
         - Reader Data: [template](https://osf.io/fv5cw/),   [example](https://osf.io/wgbty/)
     - Upload last: RFID Reads: [template](https://osf.io/mxtue/), [example 1](https://osf.io/t4by2/), [example 2](https://osf.io/t53jf/)
 1. [Upload each file](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#upload-files).
-1. View your data (FIXME).
-1. [Edit your data](FIXME) as needed.
+1. View each data type ([Reader Data](https://head.ouetag.org/readerdata), [RFID Reads](https://head.ouetag.org/rfidreads), [Tagged Data](https://head.ouetag.org/taggeddata)) in tabular format and edit your data(FIXME) as needed.
+1. [View your data on the map](https://head.ouetag.org/map) if readers have GPS points.  [Multiple visualizations](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#visualize-data) are available.
 1. Use your data via [API calls](https://docs.google.com/document/d/1gWJlPUpfzh5vDinRFyxtkYlA4elWybNfmVASIK7C4wY/edit?usp=sharing).
-1. Export your data via [.csv downloads](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#downloading-your-data ).
-1. Have a question about the details of ETAG functionality?  Check below or contact our [help wiki](https://osf.io/zbd63/wiki/).
+1. Export your data via [.csv downloads](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#downloading-your-data).
+1. Have a question about the details of ETAG functionality?  Read the [In depth documentation](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#in-depth-documentation) or contact our [help wiki](https://osf.io/zbd63/wiki/) (Claire and Eli are notified when changes or comments are made).
 
 # In depth documentation
 # What is ETAG?
