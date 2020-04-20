@@ -7,17 +7,19 @@ For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or
 
 # Quick start guide: How do I use the ETAG website? 
 
-- Visit [ETAG](https://head.ouetag.org).
-- FIXME: Get a username and password if you don't have one.
-- Log in with your username and password.
-- Format three files following these templates and examples.  See the *In depth documentation*, below, for details on what the fields/columns represent.
+1. Visit [ETAG](https://head.ouetag.org).
+1. FIXME: Get a username and password if you don't have one.
+1. Log in with your username and password.
+1. Format three files following these templates and examples.  See the *In depth documentation*, below, for details on what the fields/columns represent.
     - Tagged Data: [template](https://osf.io/jzf3b/),  [example 1](https://osf.io/4m8k2/), [example 2](https://osf.io/hkmce/)
     - Reader Data: [template](https://osf.io/fv5cw/),   [example](https://osf.io/wgbty/)
     - RFID Reads: [template](https://osf.io/mxtue/), [example 1](https://osf.io/t4by2/), [example 2](https://osf.io/t53jf/)
-- Upload each file.
-- View your data (FIXME).
-
-[test](#quick-startguide-how-do-i-use-the-etag-website)
+1. [Upload each file](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#upload-files).
+1. View your data (FIXME).
+1. [Edit your data]() as needed.
+1. Use your data via [API calls](https://docs.google.com/document/d/1gWJlPUpfzh5vDinRFyxtkYlA4elWybNfmVASIK7C4wY/edit?usp=sharing).
+1. Export your data via [.csv downloads](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#downloading-your-data ).
+1. Have a question about the details of ETAG functionality?  Check below or contact our [help wiki]().
 
 # In depth documentation
 # What is ETAG?
@@ -50,7 +52,7 @@ You can upload these data files to ETAG manually (all three) or automatically (R
 Required fields are shown when you download the template from ETAG.  Your fields (columns) must have names exactly matching the template's required fields.  The template file is only shown when you do not have updates.  All extra columns in Tagged Data and Reader Data will be put in JSON fields that store data in a single, queryable column per table (for Tagged Data and Reader Data).  These extra columns are where you will put data such as animal measurements or sensor data accompanying tag reads.
 
 ### Manually 
-Use the upload tab to load the three files.  Tagged Data and Reader Data are only uploaded manually.
+Use the upload tab to load the three files manually.  Tagged Data and Reader Data can only be uploaded manually.
 
 #### Tagged Data
 ##### Upload
