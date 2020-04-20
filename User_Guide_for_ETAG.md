@@ -96,11 +96,11 @@ You will likely want to download your data to use in local analyses or as a back
 You can export and download your data as three .csv files (RFID Reads, Tagged Data, and Reader Data) from each tab (Reader Data, RFID Reads, and Tagged Data, respectively) by clicking on the "Download Data" button (bottom right).
 
 ### ETAG automated backups
-The primary ETAG repository resides within Amazon Web Services (AWS) Relational Database Services (RDS).  The ETAG system will maintain an off-site backup copy of all data through weekly backups with AWS Simple Storage Service (S3).
+The primary ETAG repository resides within Amazon Web Services (AWS) Relational Database Services (RDS).  The ETAG system will maintain an off-site backup copy of all data through daily backups with AWS Simple Storage Service (S3), which roll-over every seven (7) days (i.e., only the last seven days are kept).
 
 ETAG will generate two tape copies of all data on a monthly basis within the University of Oklahoma (OU) OURRstore (FIXME: needs implementation).
 
-With three storage locations (main on AWS RDS, weekly backups on AWS S3, and weekly on the OU Petastore), even a simultaneous and catastrophic failure in 2/3 of facilities will not result in the loss of ETAG data.  Hopefully, most users will also keep local copies of their data for 4 locations for any given dataset.
+With three storage locations (main on AWS RDS, daily rolling backups on AWS S3, and monthly static and permanent on the OU OURRstore tape system), even a simultaneous and catastrophic failure in 2/3 of facilities will not result in the loss of ETAG data.  Hopefully, most users will also keep local copies of their data for 4 locations for any given dataset.
 
 ## Visualize data
 The ETAG portal currently offers two data types, two options for tag read displays, and four filters.
@@ -115,7 +115,6 @@ The ETAG portal currently offers two data types, two options for tag read displa
     - RFID tag ID
     - Data privacy (all public data or only your data)
     - Date minimum and maximum
-
 
 You can feature visualizations on your own website by pulling from the ETAG API.  For example, [sample R code to call from the API](https://osf.io/qe53h/) could be used in combination with an [RShiny site](https://shiny.rstudio.com/).  We encourage sharing and welcome contributions via pull requests or issues to our [in development visualization code](https://osf.io/8gwjz/).  
 
