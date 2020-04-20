@@ -10,10 +10,11 @@ For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or
 1. Visit [ETAG](https://head.ouetag.org).
 1. FIXME: Get a username and password if you don't have one.
 1. Log in with your username and password.
-1. Format three files types following these templates and examples.  Your files need to have exactly the same column headers and be in .csv format as each example file.  See the *In depth documentation*, below, for details on what the fields/columns represent.  You must have Tagged Data and Reader Data to associated with RFID Reads.
+1. Format three files types following these templates and examples.  Your files need to have exactly the same column headers and be in .csv format as each example file.  (See formatting)[], for details on what the fields/columns represent and how they must be formatted.  You must have Tagged Data and Reader Data to associated with RFID Reads.
     - Tagged Data: [template](https://osf.io/jzf3b/),  [example 1](https://osf.io/4m8k2/), [example 2](https://osf.io/hkmce/)
     - Reader Data: [template](https://osf.io/fv5cw/),   [example](https://osf.io/wgbty/)
     - RFID Reads: [template](https://osf.io/mxtue/), [example 1](https://osf.io/t4by2/), [example 2](https://osf.io/t53jf/)
+    1. It is easiest to paste your data into the template in a spreadsheet program such as Microsoft Excel, Mac Pages, LibreOffice Calculate.
 1. [Upload each file](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#upload-files).
 1. View your data (FIXME).
 1. [Edit your data]() as needed.
