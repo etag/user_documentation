@@ -5,7 +5,7 @@ For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or
 
 ### Fixme: screenshots after UI complete.
 
-# Quick start guide: How do I use the ETAG website?
+# (Quick start guide: How do I use the ETAG website?)[#quickstart]
 
 - Visit [ETAG](https://head.ouetag.org).
 - FIXME: Get a username and password if you don't have one.
