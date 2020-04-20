@@ -17,7 +17,7 @@ For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or
 - Upload each file.
 - View your data (FIXME).
 
-(test)[#quick-startguide-how-do-i-use-the-etag-website]
+[test](#quick-startguide-how-do-i-use-the-etag-website)
 
 # In depth documentation
 # What is ETAG?
