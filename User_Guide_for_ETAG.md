@@ -4,6 +4,7 @@
 For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag) for the [visualizations and web portal](https://github.com/etag/portal_nuxt), [data import](https://github.com/etag/etagq), or [interacting with the API](https://github.com/etag/etag-api).
 
 # Quick start guide: How do I use the ETAG website? 
+The quick-start section is designed for users who need a refresher or want an overview of the process.  The next section will give a [step-by-step tutorial](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#step-by-step-tutorial).  The final section, [In Depth Documentation](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#in-depth-documentation), will describe features in detail.
 
 1. Visit [ETAG](https://head.ouetag.org).
 1. FIXME: Get a username and password if you don't have one.
@@ -19,6 +20,9 @@ For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or
 1. Use your data via [API calls](https://docs.google.com/document/d/1gWJlPUpfzh5vDinRFyxtkYlA4elWybNfmVASIK7C4wY/edit?usp=sharing).
 1. Export your data via [.csv downloads](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#downloading-your-data).
 1. Have a question about the details of ETAG functionality?  Read the [In depth documentation](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#in-depth-documentation) or contact our [help wiki](https://osf.io/zbd63/wiki/) (Claire and Eli are notified when changes or comments are made).
+
+# Step-by-step tutorial
+FIXME: from workshop tutorials.
 
 # In depth documentation
 # What is ETAG?
