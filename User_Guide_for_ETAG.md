@@ -38,7 +38,7 @@ You should use ETAG if you have RFID reads with associated data on the tagged or
 - Using ETAG's already designed, standardized database will save you time on managing your own database.
 - ETAG provides several visualizations that can be accessed via API for your lab website or outreach.
 - Data from all of your studies can be pulled from the database at once with API calls in R or Python.
-- Data can be public OR private, allowing you to share data when you're ready.
+- Data can be public OR private, allowing you to share data when you're ready.  Our freemium model (FIXME) will allow data to be private for two years with a free account.  Paid accounts will go towards funding ETAG server and maintenance costs.
 
 ## Create an account (FIXME)
 
