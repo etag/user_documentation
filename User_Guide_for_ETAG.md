@@ -116,7 +116,7 @@ The ETAG portal currently offers two data types, two options for tag read displa
     - Data privacy (all public data or only your data)
     - Date minimum and maximum
 
-You can feature visualizations on your own website by pulling from the ETAG API.  For example, [sample R code to call from the API](https://osf.io/qe53h/) could be used in combination with an [RShiny site](https://shiny.rstudio.com/).  We encourage sharing and welcome contributions via pull requests or issues to our [in development visualization code](https://osf.io/8gwjz/).  
+You can feature visualizations on your own website by pulling from the ETAG API.  Even if you are logged into the main ETAG site, if you want to view the [ETAG API directly in your browser](https://head.ouetag.org/api/) you will need to log in again to view your data.  For example, [sample R code to call from the API](https://osf.io/qe53h/) could be used in combination with an [RShiny site](https://shiny.rstudio.com/).  We encourage sharing and welcome contributions via pull requests or issues to our [in development visualization code](https://osf.io/8gwjz/).  
 
 ## Design a RFID antenna (FIXME: in progress)
 The "Antenna" tab allows you to input parameters and see the resulting RFID antenna.  Please contact Dr. J. Ruyle (ruyle@ou.edu) or Dr. E. Bridge (ebridge@ou.edu) if you have questions about antenna design.  Please add an issue to portal_nuxt regarding [this page](https://github.com/etag/portal_nuxt/blob/test/pages/antenna.vue) if you have suggested modifications to the antenna visualization.
