@@ -1,6 +1,6 @@
 # User guide to Electronic Transponder Analysis Gateway
 
-## Last updated 27 April 2020
+## Last updated 30 April 2020
 For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag) for the [visualizations and web portal](https://github.com/etag/portal_nuxt), [data import](https://github.com/etag/etagq), or [interacting with the API](https://github.com/etag/etag-api).
 
 # Quick start guide: How do I use the ETAG website? 
@@ -53,12 +53,13 @@ Three comma-separated text files (.csv) are required by ETAG for upload.  ETAG u
 You can upload these data files to ETAG manually (all three) or automatically (RFID Reads only).  Once you have Tagged Data and Reader Locations, you can upload the updated RFID Reads file or additional non-overlapping RFID Reads files as you get more reads.  We will use these filenames, but the filenames are not standardized in the system.  Files are deleted from the server after being put into the database, so your data exists, but only in the database.
 
 ### Required fields
-Required fields are shown when you download the template from ETAG.  Your fields (columns) must have names exactly matching the template's required fields, including capitalization and punctuation such as underscores.  All extra columns in Tagged Data and Reader Data will be put in JSON fields that store data in a single, queryable column per table (for Tagged Data: "Field Data" and Reader Data: "Accessory Data").  These extra columns are where you will put data such as animal measurements or sensor data accompanying tag reads.
+Required field names are shown when you download the templates.  Your fields (columns) must have names exactly matching the template's required fields, including capitalization and punctuation such as underscores.  All extra columns in Tagged Data and Reader Data will be put in JSON fields that store data in a single, queryable column per table (for Tagged Data: "Field Data" and Reader Data: "Accessory Data").  These extra columns are where you will put data such as animal measurements or sensor data accompanying tag reads.
 
 ### Manually 
 Use named tabs to load any of the three files manually.  Tagged Data and Reader Data can only be uploaded manually and must be uploaded before RFID Reads.  If you have uploaded previous Tagged Data or Reader Data, then you can upload new RFID Reads without repeating that step for the same study.
 
 #### Tagged Data
+The minimum required fields to be filled are [TAG_ID, ANIMAL_SPECIES, and TAGSTARTDATE](https://github.com/etag/etagq/blob/master/etagq/tasks/tasks.py).  The [template file](https://osf.io/jzf3b/) shows the required headers along with additional standard headers (do not change these names).
 ##### Upload
 When you upload your Tagged Data file, the code checks a list of the user's existing owned tag IDs versus the tag IDs in your .csv file.  The tag_id column is limited to 10 characters.  (Please contact [us](mailto: cmcurry@ou.edu) if you use tags with >10 characters (we have not yet encountered such).
 
