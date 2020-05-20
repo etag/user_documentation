@@ -107,6 +107,28 @@ ETAG will generate two tape copies of all data on a monthly basis within the Uni
 
 With three storage locations (main on AWS RDS, daily rolling backups on AWS S3, and monthly static on AWS S3), even a simultaneous and catastrophic failure in 2/3 of facilities will not result in the loss of ETAG data.  Hopefully, most users will also keep local copies of their data for 4 locations for any given dataset.
 
+## Accessing data with the API
+### Authorization to access the API 
+To access public information (as in R example below), no API token is needed.  To access private information (the default data upload setting), the API call will need to include the user's api token for 
+authentication. This token can be accessed at: https://head.ouetag.org/api/user under the "auth-token" field. This token needs to be 
+included in the header of the API request. 
+
+### API access code.
+Run code from your preferred platform.  We provide sample code for [R API calls](https://osf.io/qe53h/) and [Python API calls](https://osf.io/pz7ej/).  You can also use Bash as in the below example.
+    curl -X POST --data-ascii 
+    '{"function":"etagq.tasks.tasks.etagDataUpload","queue":"celery","args":[],"kwargs":{ },"tags": []}' https://head.ouetag.org/api/queue/run/etagq.tasks.tasks.etagDataUpload/?format=json -H Content-Type:application/json -H 'Authorization: Token yourauthcodehere'
+
+### Syntax and specifics
+The API supports the following methods for getting and setting values: POST, PUT, GET.  To receive JSON serialized data, include "format=json" as part of the query. For example: 
+https://ec2-54-186-103-38.us-west-2.compute.amazonaws.com/api/user/?format=json
+.csv format is not supported directly via the API at this time.
+
+### Examples
+Here is an example of querying the locations for reader "T2B" on the test instance: https://ec2-54-186-103-38.us-west-2.compute.amazonaws.com/api/etag/reader_location/?reader_id=T2B
+
+Endpoints can be queried by supplying a field and value to filter on; with 
+multiple filters separated with an "&". For example: https://ec2-54-186-103-38.us-west-2.compute.amazonaws.com/api/etag/tag_reads/?reader_id=TU109876&tag_id=TU0000720
+
 ## Visualize data
 The ETAG portal currently offers two data types, two options for tag read displays, and four filters.
 - Data types
