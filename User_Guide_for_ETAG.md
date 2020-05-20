@@ -4,7 +4,7 @@
 For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag) for the [visualizations and web portal](https://github.com/etag/portal_nuxt), [data import](https://github.com/etag/etagq), or [interacting with the API](https://github.com/etag/etag-api).
 
 # Quick start guide: How do I use the ETAG website? 
-The quick-start section is designed for users who need a refresher or want an overview of the process.  The next section will give a [step-by-step tutorial](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#step-by-step-tutorial).  The final section, [In Depth Documentation](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#in-depth-documentation), will describe features in detail.
+The quick-start section is designed for users who need a refresher or want an overview of the process.  This section gives a step-by-step tutorial.  The final section, [In Depth Documentation](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#in-depth-documentation), will describe features in detail.
 
 1. Visit [the ETAG website](https://head.ouetag.org).
 1. Get a username and password if you don't have one.  [Contact Claire](mailto:cmcurry@ou.edu) to get a username.  (FIXME: Tyler implementing user management system.)
