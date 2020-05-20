@@ -6,25 +6,30 @@ For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or
 # Quick start guide: How do I use the ETAG website? 
 The quick-start section is designed for users who need a refresher or want an overview of the process.  The next section will give a [step-by-step tutorial](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#step-by-step-tutorial).  The final section, [In Depth Documentation](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#in-depth-documentation), will describe features in detail.
 
-1. Visit [ETAG](https://head.ouetag.org).
-1. FIXME: Get a username and password if you don't have one.
-1. Log in with your username and password.
-1. Format the following three files types following these templates and examples.  Your files need to have (at minimum) exactly the same column headers and be in .csv format as each example file.  Extra columns are acceptable in Tagged Data and RFID Reads and will be kept as "field data" or "accessory data".  [See formatting](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#required-fields), for details on what the fields/columns represent and how they must be formatted.  It is easiest to paste your data into the template in a spreadsheet program such as Microsoft Excel or LibreOffice Calculate.  
-    - Upload first (any order)
-        - Tagged Data: [template](https://osf.io/jzf3b/),  [example 1](https://osf.io/4m8k2/), [example 2](https://osf.io/hkmce/)
-        - Reader Data: [template](https://osf.io/fv5cw/),   [example](https://osf.io/wgbty/)
-    - Upload last: RFID Reads: [template](https://osf.io/mxtue/), [example 1](https://osf.io/t4by2/), [example 2](https://osf.io/t53jf/)
+1. Visit [the ETAG website](https://head.ouetag.org).
+1. Get a username and password if you don't have one.  [Contact Claire](mailto:cmcurry@ou.edu) to get a username.  (FIXME: Tyler implementing user management system.)
+1. [Log in with your username and password](https://head.ouetag.org/login/) by clicking on the "Log in" button in the upper right corner of the site.
+1. Format your files' columns and data using our examples and templates.  The filename itself does not matter (file is not kept - data are transferred to database).
+    - Format data following examples:
+        - Tagged Data: [example 1](https://osf.io/4m8k2/), [example 2](https://osf.io/hkmce/), [template](https://osf.io/jzf3b/)
+        - Reader Data: [example](https://osf.io/wgbty/), [template](https://osf.io/fv5cw/)
+        - RFID Reads: [example 1](https://osf.io/t4by2/), [example 2](https://osf.io/t53jf/), [template](https://osf.io/mxtue/)
+    - Your files need to have (at minimum) exactly the same column headers and be in .csv format as each example file.
+    - Extra columns are acceptable in Tagged Data and RFID Reads and will be kept as "field data" or "accessory data".
+    - [See formatting](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#required-fields), for details on what the fields/columns represent and how they must be formatted.  It is easiest to paste your data into the template in a spreadsheet program such as Microsoft Excel or LibreOffice Calculate. 
 1. [Upload each file](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#upload-files).
-1. View each data type ([Reader Data](https://head.ouetag.org/readerdata), [RFID Reads](https://head.ouetag.org/rfidreads), [Tagged Data](https://head.ouetag.org/taggeddata)) in tabular format and edit your data(FIXME) as needed.
+    - Upload first (any order)
+        - Tagged Data
+        - Reader Data
+    - Upload last
+        - RFID Reads (you may have multiples of this file type because each reader will generate this file if you have multiple readers)
+1. View each data type ([Reader Data](https://head.ouetag.org/readerdata), [RFID Reads](https://head.ouetag.org/rfidreads), [Tagged Data](https://head.ouetag.org/taggeddata)) in tabular format and edit your data as needed.
 1. [View your data on the map](https://head.ouetag.org/map) if readers have GPS points.  [Multiple visualizations](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#visualize-data) are available.
-1. Use your data via [API calls](https://docs.google.com/document/d/1gWJlPUpfzh5vDinRFyxtkYlA4elWybNfmVASIK7C4wY/edit?usp=sharing).
+1. Use your data via [API calls]().
 1. Export your data via [.csv downloads](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#downloading-your-data).
 1. Have a question about the details of ETAG functionality?  Read the [In depth documentation](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#in-depth-documentation) or contact our [help wiki](https://osf.io/zbd63/wiki/) (Claire and Eli are notified when changes or comments are made).
 
-# Step-by-step tutorial
-FIXME: from workshop tutorials.
 
-# In depth documentation
 # What is ETAG?
 The Electronic Transponder Analysis Gateway (ETAG) is a database and software system to provide professional data management and versatile data dissemination to the growing community of researchers who use Radio Frequency Identification (RFID) technology to advance biological inquiries in fields like animal behavior, ecological physiology, and community ecology. ETAG is an infrastructure based on open-source tools, allowing scientists to collect, validate, visualize, analyze, and share data in near real-time. ETAG facilitates new capacities both for producing novel science and for sharing data with fellow researchers and the general public. Our system will free up time from the management of data collection, analysis, and curation (currently done by hand), leaving researchers with more time for science. 
 
@@ -40,7 +45,9 @@ You should use ETAG if you have RFID reads with associated data on the tagged or
 - Data from all of your studies can be pulled from the database at once with API calls in R or Python.
 - Data can be public OR private, allowing you to share data when you're ready.  Our freemium model (FIXME) will allow data to be private for two years with a free account.  Paid accounts will go towards funding ETAG server and maintenance costs.
 
-## Create an account (FIXME)
+# In depth documentation
+## Create an account
+[Contact Claire](mailto:cmcurry@ou.edu) to get a username.  (FIXME: Tyler implementing user management system.)
 
 ## Upload files
 Three comma-separated text files (.csv) are required by ETAG for upload.  ETAG understands (parses) data from certain fields to populate the database.
