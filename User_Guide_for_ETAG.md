@@ -1,6 +1,6 @@
 # User guide to Electronic Transponder Analysis Gateway
 
-## Last updated 30 April 2020
+## Last updated 20 May 2020
 For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag) for the [visualizations and web portal](https://github.com/etag/portal_nuxt), [data import](https://github.com/etag/etagq), or [interacting with the API](https://github.com/etag/etag-api).
 
 # Quick start guide: How do I use the ETAG website? 
@@ -105,7 +105,7 @@ The primary ETAG repository resides within Amazon Web Services (AWS) Relational 
 
 ETAG will generate two tape copies of all data on a monthly basis within the University of Oklahoma (OU) OURRstore (FIXME: needs implementation).
 
-With three storage locations (main on AWS RDS, daily rolling backups on AWS S3, and monthly static and permanent on the OU OURRstore tape system), even a simultaneous and catastrophic failure in 2/3 of facilities will not result in the loss of ETAG data.  Hopefully, most users will also keep local copies of their data for 4 locations for any given dataset.
+With three storage locations (main on AWS RDS, daily rolling backups on AWS S3, and monthly static on AWS S3), even a simultaneous and catastrophic failure in 2/3 of facilities will not result in the loss of ETAG data.  Hopefully, most users will also keep local copies of their data for 4 locations for any given dataset.
 
 ## Visualize data
 The ETAG portal currently offers two data types, two options for tag read displays, and four filters.
