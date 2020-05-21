@@ -1,6 +1,6 @@
 # User guide to Electronic Transponder Analysis Gateway
 
-## Last updated 20 May 2020
+## Last updated 21 May 2020
 For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag) for the [visualizations and web portal](https://github.com/etag/portal_nuxt), [data import](https://github.com/etag/etagq), or [interacting with the API](https://github.com/etag/etag-api).
 
 # Quick start guide: How do I use the ETAG website? 
@@ -75,9 +75,9 @@ Use named tabs to load any of the three files manually.  Tagged Data and Reader 
 #### Tagged Data
 The minimum required fields to be filled are [TAG_ID, ANIMAL_SPECIES, and TAGSTARTDATE](https://github.com/etag/etagq/blob/master/etagq/tasks/tasks.py).  The [template file](https://osf.io/jzf3b/) shows the required headers along with additional standard headers (do not change these names).
 ##### Upload
-When you upload your Tagged Data file, the code checks a list of the user's existing owned tag IDs versus the tag IDs in your .csv file.  The tag_id column is limited to 10 characters.  (Please contact [us](mailto: cmcurry@ou.edu) if you use tags with >10 characters (we have not yet encountered such).
+When you upload your Tagged Data file, the code checks a list of the user's existing owned tag IDs versus the tag IDs in your .csv file.  The tag_id column is limited to 10 characters.  Please contact [Eli Bridge](mailto:ebridge@ou.edu) and [Claire Curry](mailto:cmcurry@ou.edu) if you use tags with >10 characters (we have not yet encountered such).
 
-If the tag ID doesn't exist, ETAG adds the tag ID to the database.  If the tag exists but you (the user) don't "own" it, you cannot update the data for that tag ID. This would happen if someone else has already uploaded that tag ID (perhaps someone else in your research group, or another research group if you detected their animal). The API currently gives an error (FIXME: Tyler will add what the message is) but not the user interface (UI), so for you as an end user it will simply not upload.  The remainder of your .csv file will upload normally.
+If the tag ID doesn't exist, ETAG adds the tag ID to the database.  If the tag exists but you (the user) don't "own" it, you cannot update the data for that tag ID. This would happen if someone else has already uploaded that tag ID (perhaps someone else in your research group, or another research group if you detected their animal). The remainder of your .csv file will upload normally.
 
 ##### Correcting and appending records
 If the tag ID matches one of your owned tags in the database, ETAG will check all other fields for your Tagged Data file.  If there are differences, ETAG will UPDATE BY OVERWRITING individual tag records.  If you upload a file where you have deleted a record, ETAG will not remove that record from the database - you must delete it manually through the ETAG editing interface.  (ETAG is not comparing the csv files to each other, but matching records from your csv to data that has already been processed into the database.)
