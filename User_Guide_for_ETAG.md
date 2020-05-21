@@ -75,7 +75,7 @@ If the tag ID doesn't exist, ETAG adds the tag ID to the database.  If the tag e
 ##### Correcting and appending records
 If the tag ID matches one of your owned tags in the database, ETAG will check all other fields for your Tagged Data file.  If there are differences, ETAG will UPDATE BY OVERWRITING individual tag records.  If you upload a file where you have deleted a record, ETAG will not remove that record from the database - you must delete it manually through the ETAG editing interface.  (ETAG is not comparing the csv files to each other, but matching records from your csv to data that has already been processed into the database.)
 
-If there are multiple rows in your Tagged Data file that have identical tag IDs (i.e., you have multiple records or measurements for one individual), ETAG will update the field data (FIXME: in progress for implementation).
+If there are multiple rows in your Tagged Data file that have identical tag IDs and tag start dates (i.e., you have multiple records or measurements for one individual), ETAG will update the field data and use the last record for updating non-field data values.  You can [read the code itself to further see logic for updates](https://github.com/etag/etagq/blob/4894da9d4f73a310a5f5a0dcba891dc528629780/etagq/tasks/db_utils.py#L303).
 
 These two behaviors provide a method to correct data via uploads.  You can also use the UI to correct them manually, as for deletions. 
 
