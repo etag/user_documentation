@@ -43,7 +43,14 @@ You should use ETAG if you have RFID reads with associated data on the tagged or
 - Using ETAG's already designed, standardized database will save you time on managing your own database.
 - ETAG provides several visualizations that can be accessed via API for your lab website or outreach.
 - Data from all of your studies can be pulled from the database at once with API calls in R or Python.
-- Data can be public OR private, allowing you to share data when you're ready.  Our freemium model (FIXME) will allow data to be private for two years with a free account.  Paid accounts will go towards funding ETAG server and maintenance costs.
+- Data can be public OR private, allowing you to share data when you're ready.
+
+# How can I help?
+- Submit your data to ETAG!
+- Tell your colleagues!
+- [Donate](mailto:ebridge@ou.edu).  Donations will go towards funding ETAG server and maintenance costs, which are currently about US$60-65 per month.
+- Write ETAG server maintenance costs into your budget if you are writing a grant proposal involving RFID data collection.  Please contact [Eli Bridge](mailto:ebridge@ou.edu) for information on current costs and needs.
+- Write code!  Please contribute issues, fixes, and ideas to our repositories via pull requests and the Github issue tracker.
 
 # In depth documentation
 ## Create an account
