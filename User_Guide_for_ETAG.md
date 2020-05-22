@@ -7,8 +7,10 @@ For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or
 The quick-start section is designed for users who need a refresher or want an overview of the process.  This section gives a step-by-step tutorial.  The final section, [In Depth Documentation](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#in-depth-documentation), will describe features in detail.
 
 1. Visit [the ETAG website](https://head.ouetag.org).
-1. Get a username and password if you don't have one.  [Contact Claire](mailto:cmcurry@ou.edu) to get a username.  (FIXME: Tyler implementing user management system.)
+1. Get a username and password if you don't have one.  [Contact Claire](mailto:cmcurry@ou.edu) to get a username or click the register button to link to Claire's email.  (FIXME: Tyler implementing user management system.)
 1. [Log in with your username and password](https://head.ouetag.org/login/) by clicking on the "Log in" button in the upper right corner of the site.
+<kbd><img src="/images/login_button.png" alt="registration and login links with a rectangle around them" style="width:25%;height:25%;"/></kbd>
+
 1. Format your files' columns and data using our examples and templates.  The filename itself does not matter (file is not kept - data are transferred to database).
     - Format data following examples:
         - Tagged Data: [example 1](https://osf.io/4m8k2/), [example 2](https://osf.io/hkmce/), [template](https://osf.io/jzf3b/)
@@ -25,7 +27,7 @@ The quick-start section is designed for users who need a refresher or want an ov
         - RFID Reads (you may have multiples of this file type because each reader will generate this file if you have multiple readers)
 
 These data upload tabs are located in the menu along the top of the website and will be visible when you are logged in.
-<kbd><img src="/about_and_logged_in_tabs-data_upload_highlighted.png" alt="data entry tabs with a rectangle around them" style="width:25%;height:25%;"/></kbd>
+<kbd><img src="/images/about_and_logged_in_tabs-data_upload_highlighted.png" alt="data entry tabs with a rectangle around them" style="width:25%;height:25%;"/></kbd>
 
 1. View each data type ([Reader Data](https://head.ouetag.org/readerdata), [RFID Reads](https://head.ouetag.org/rfidreads), [Tagged Data](https://head.ouetag.org/taggeddata)) in tabular format and edit your data as needed.
 1. [View your data on the map](https://head.ouetag.org/map) if readers have GPS points.  [Multiple visualizations](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#visualize-data) are available.
