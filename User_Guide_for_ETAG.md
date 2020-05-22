@@ -10,7 +10,7 @@ The quick-start section is designed for users who need a refresher or want an ov
 1. Get a username and password if you don't have one.  [Contact Claire](mailto:cmcurry@ou.edu) to get a username or click the register button to link to Claire's email.  (FIXME: Tyler implementing user management system.)
 1. [Log in with your username and password](https://head.ouetag.org/login/) by clicking on the "Log in" button in the upper right corner of the site.
 
-<kbd><img src="/images/login_button.png" alt="registration and login links with a rectangle around them" style="width:25%;height:25%;"/></kbd>
+<kbd><img src="/images/login_button.PNG" alt="registration and login links with a rectangle around them" style="width:25%;height:25%;"/></kbd>
 
 1. Format your files' columns and data using our examples and templates.  The filename itself does not matter (file is not kept - data are transferred to database).
     - Format data following examples:
