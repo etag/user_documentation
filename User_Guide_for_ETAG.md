@@ -96,7 +96,7 @@ These two behaviors provide a method to correct data via uploads.  You can also 
 If you want to append data, you MUST upload all previous records plus your appended items. You can export your existing records if you have misplaced your local files using the blue "Download data" button below your records.  Use that as a template to upload the corrected (in this case, appended) records for the tag ID (i.e. for the tagged animal/item).
 
 #### Reader Data
-Reader Data does not require a GPS point, but RFID Reads will only be available for visualization if GPS points are provided.  The tag ID is the RFID tag identifying number.  This is limited to 10 characters.  The UUID is the reader identifying number (i.e., the reader's "name").  If you don’t have a reader UUID, we recommend using your username (which is required to be unique) and adding sequential numbers after it for each reader.  Start and end date columns allow for you to use the same reader for different projects by specifying when the reader should be associated with which RFID read data.
+Reader Data does not require a GPS point, but RFID Reads will only be available for visualization if GPS points are provided.  The tag ID is the RFID tag identifying number.  This is limited to 10 characters.  The UUID is the reader identifying number (i.e., the reader's "name").  If you don’t have a reader UUID, we recommend using your username (which is required to be unique) and adding sequential numbers after it for each reader.  Start and end date columns allow for you to use the same reader for different projects by specifying when the reader should be associated with which RFID read data.  UUIDs are limited to (FIXME) characters.
 
 
 #### Tag reads
