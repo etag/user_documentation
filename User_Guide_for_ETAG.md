@@ -24,7 +24,7 @@ The quick-start section is designed for users who need a refresher or want an ov
     - Upload last
         - RFID Reads (you may have multiples of this file type because each reader will generate this file if you have multiple readers)
 
-<kbd><img src="/about_and_logged_in_tabs-data_upload_highlighted.png" alt = "data entry tabs with a rectangle around them" style="width:50%;height:50%; /></kbd>
+<kbd><img src="/about_and_logged_in_tabs-data_upload_highlighted.png" alt="data entry tabs with a rectangle around them" style="width:50%;height:50%;"/></kbd>
 
 1. View each data type ([Reader Data](https://head.ouetag.org/readerdata), [RFID Reads](https://head.ouetag.org/rfidreads), [Tagged Data](https://head.ouetag.org/taggeddata)) in tabular format and edit your data as needed.
 1. [View your data on the map](https://head.ouetag.org/map) if readers have GPS points.  [Multiple visualizations](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#visualize-data) are available.
