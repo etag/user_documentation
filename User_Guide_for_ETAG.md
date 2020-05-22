@@ -135,9 +135,12 @@ authentication. This token can be accessed at: https://head.ouetag.org/api/user 
 included in the header of the API request. 
 
 ### API access code.
-Run code from your preferred platform.  We provide sample code for [R API calls](https://osf.io/b7n6z/) along with a separate, required file for username and password(https://osf.io/k4nsz/), as well as [Python API calls](https://osf.io/pz7ej/).  You can also use Bash as in the below example.
+Run code from your preferred platform.  We provide sample code for [R API calls](https://osf.io/b7n6z/) along with a separate, required file for [username and password](https://osf.io/k4nsz/).  Both files must be placed in the same R working directory.  We provide sample code for [Python API calls](https://osf.io/pz7ej/) as a Jupyter notebook.  You can also use Bash as in the below example.
+
+
     curl -X POST --data-ascii 
     '{"function":"etagq.tasks.tasks.etagDataUpload","queue":"celery","args":[],"kwargs":{ },"tags": []}' https://head.ouetag.org/api/queue/run/etagq.tasks.tasks.etagDataUpload/?format=json -H Content-Type:application/json -H 'Authorization: Token yourauthcodehere'
+
 
 ### Syntax and specifics
 The API supports the following methods for getting and setting values: POST, PUT, GET.  To receive JSON serialized data, include "format=json" as part of the query. For example: 
