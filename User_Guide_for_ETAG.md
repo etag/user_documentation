@@ -1,6 +1,6 @@
 # User guide to Electronic Transponder Analysis Gateway
 
-## Last updated 22 May 2020
+## Last updated 24 July 2020
 For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag) for the [visualizations and web portal](https://github.com/etag/portal_nuxt), [data import](https://github.com/etag/etagq), or [interacting with the API](https://github.com/etag/etag-api).
 
 # Quick start guide: How do I use the ETAG website? 
@@ -91,7 +91,7 @@ If the tag ID matches one of your owned tags in the database, ETAG will check al
 
 If there are multiple rows in your Tagged Data file that have identical tag IDs and tag start dates (i.e., you have multiple records or measurements for one individual), ETAG will update the field data and use the last record for updating non-field data values.  You can [read the code itself to further see logic for updates](https://github.com/etag/etagq/blob/4894da9d4f73a310a5f5a0dcba891dc528629780/etagq/tasks/db_utils.py#L303).
 
-These two behaviors provide a method to correct data via uploads.  You can also use the UI to correct them manually, as for deletions. 
+These two behaviors provide a method to correct data via uploads.  You can also use the UI to correct them manually, as for deletions, or the [API using PATCH](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#accessing-data-with-the-api).  
 
 If you want to append data, you MUST upload all previous records plus your appended items. You can export your existing records if you have misplaced your local files using the blue "Download data" button below your records.  Use that as a template to upload the corrected (in this case, appended) records for the tag ID (i.e. for the tagged animal/item).
 
@@ -105,6 +105,8 @@ Tag reads from 2019 or later Bridge Lab ETAG readers should conform to the ETAG 
 Time stamps must be in the formats described in the database documentation section [8.5.1.3. Time Stamps](https://www.postgresql.org/docs/9.3/datatype-datetime.html#DATATYPE-TIMESTAMPS)
 
 If you make changes to your tag reads file in Excel, beware Excel's automatic csv import.  Manually set Excel to import everything as text.  Otherwise, Excel will change the date formatting or drop leading zeroes from RFID tag numbers.  An alternative is using R to add a column with the reader UUID (reader name).
+
+You can also use the UI to correct them manually, as for deletions, or the [API using PATCH](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#accessing-data-with-the-api).  In particular, we currently only support updating records from private (default) to public (recommended to encourage sharing of data and public viewing of data) with API at the moment.  We currently provide [R code](https://osf.io/b7n6z/) to change private data to public.  We encourage those who access the API via Python or curl to share their code via the ETAG wiki, a pull request to this repository, or by [sharing the code for posting](mailto:cmcurry@ou.edu).
 
 ### Automatically
 You can upload RFID Reads automatically to the ETAG portal using the API and your authentication token.  Duplicates should not occur because loading occurs real-time.  Tagged Data and Reader Data files must be uploaded manually before you allow RFID Reads to attempt loading.  This feature is in development and not currently available.
@@ -143,7 +145,7 @@ Run code from your preferred platform.  We provide sample code for [R API calls]
 
 
 ### Syntax and specifics
-The API supports the following methods for getting and setting values: POST, PUT, GET.  To receive JSON serialized data, include "format=json" as part of the query. For example: 
+The API supports the following methods for getting and setting values: POST, PATCH, GET.  To receive JSON serialized data, include "format=json" as part of the query. For example: 
 https://ec2-54-186-103-38.us-west-2.compute.amazonaws.com/api/user/?format=json
 .csv format is not supported directly via the API at this time.
 
