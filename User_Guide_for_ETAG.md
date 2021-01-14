@@ -7,7 +7,7 @@ For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or
 The quick-start section is designed for users who need a refresher or want an overview of the process.  This section gives a step-by-step tutorial.  The final section, [In Depth Documentation](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#in-depth-documentation), will describe features in detail.
 
 1. Visit [the ETAG website](https://head.ouetag.org).
-1. Get a username and password if you don't have one.  [Contact Claire](mailto:cmcurry@ou.edu) to get a username or click the register button to link to Claire's email.  (FIXME: Tyler implementing user management system.)
+1. Get a username and password if you don't have one.  [Contact Claire](mailto:cmcurry@ou.edu) to get a username or click the register button to link to Claire's email.  ([FIXME: automated user management system.](https://github.com/etag/portal_nuxt/issues/15))
 1. [Log in with your username and password](https://head.ouetag.org/login/) by clicking on the "Log in" button in the upper right corner of the site.
 
 <kbd><img src="/images/login_button.PNG" alt="registration and login links with a rectangle around them" style="width:25%;height:25%;"/></kbd>
