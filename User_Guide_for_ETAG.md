@@ -1,6 +1,6 @@
 # User guide to Electronic Transponder Analysis Gateway
 
-## Last updated 24 July 2020
+## Last updated 14 January 2021
 For assistance or bug reports, please contact [Claire Curry](cmcurry@ou.edu), or submit an issue on our [repositories](https://github.com/etag) for the [visualizations and web portal](https://github.com/etag/portal_nuxt), [data import](https://github.com/etag/etagq), or [interacting with the API](https://github.com/etag/etag-api).
 
 # Quick start guide: How do I use the ETAG website? 
@@ -14,9 +14,9 @@ The quick-start section is designed for users who need a refresher or want an ov
 
 1. Format your files' columns and data using our examples and templates.  The filename itself does not matter (file is not kept - data are transferred to database).
     - Format data following examples:
-        - Tagged Data: [example 1](https://osf.io/4m8k2/), [example 2](https://osf.io/hkmce/), [template](https://osf.io/jzf3b/)
+        - Tagged Data: [example with no field data columns](https://osf.io/8k7pb/), [template](https://osf.io/jzf3b/)
         - Reader Data: [example](https://osf.io/wgbty/), [template](https://osf.io/fv5cw/)
-        - RFID Reads: [example 1](https://osf.io/t4by2/), [example 2](https://osf.io/t53jf/), [template](https://osf.io/mxtue/)
+        - RFID Reads: [example](https://osf.io/pcf6t/) (more examples in OSF Storage>templates_with_example_data>Public_data_Purple_Martins>FORMATTED_public_example_data>RFID_reads_one_file_per_reader), [template](https://osf.io/mxtue/)
     - Your files need to have (at minimum) exactly the same column headers and be in .csv format as each example file.
     - Extra columns are acceptable in Tagged Data and RFID Reads and will be kept as "field data" or "accessory data".
     - [See formatting](https://github.com/etag/user_documentation/blob/master/User_Guide_for_ETAG.md#required-fields), for details on what the fields/columns represent and how they must be formatted.  It is easiest to paste your data into the template in a spreadsheet program such as Microsoft Excel or LibreOffice Calculate. 
